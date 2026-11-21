@@ -399,7 +399,7 @@ textarea{border:0;background:transparent;padding:7px 9px;width:100%;resize:verti
 #report.exporting{padding:28px;background:#fff;}
 #report.exporting .noexport{display:none !important;}
 #report.exporting tr.off{display:none !important;}
-@media print{#report tr.off{display:none !important;}}
+@media print{:is(#report,.rpb) tr.off{display:none !important;}}
 tr.off td{opacity:.38;}
 .pickcol{width:48px;text-align:center !important;white-space:nowrap;}
 .pickcol input{width:17px;height:17px;accent-color:var(--accent);cursor:pointer;}
@@ -469,23 +469,23 @@ section.block>h2{display:flex;align-items:center;gap:10px;}
 .sbox ul.kv li:last-child{border-bottom:0;}
 .sbox ul.kv li b{font-family:var(--serif);font-size:1.05rem;}
 .overall{margin:14px 0 0;padding:12px 16px;border-left:3px solid var(--gold);background:var(--gold-soft);border-radius:0 10px 10px 0;font-size:.98rem;line-height:1.7;}
-#report .ccards{grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:10px;}
-#report .ccard{padding:12px 14px;border-top-width:4px;}
-#report .ccard h3{font-size:.95rem;flex-wrap:wrap;}
-#report .ccard h3 .chip{margin-left:0;font-size:.68rem;padding:1px 8px;}
-#report .cnum{font-size:1.6rem;margin:4px 0 2px;}
-#report .overview{padding:8px 12px;}
-#report .overview .radar{display:block;width:460px;max-width:100%;height:auto;margin:0 auto;}
-#report .head{padding-bottom:0;margin-bottom:6px;}
-#report .head .who{font-size:2rem;}
-#report section.block{margin-top:22px;}
-#report .sbox{padding:10px 14px;}
-#report .overall{margin-top:10px;padding:10px 14px;}
-#report .mimgs{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
-#report .mimgs img{width:100%;height:300px;max-height:none;object-fit:contain;background:var(--surface);}
-#report .mcmp .mimgs img{height:260px;}
-#report .ccard .ruler{margin:10px 0 4px;}
-#report .ccard .zl{font-size:.66rem;}
+:is(#report,.rpb) .ccards{grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:10px;}
+:is(#report,.rpb) .ccard{padding:12px 14px;border-top-width:4px;}
+:is(#report,.rpb) .ccard h3{font-size:.95rem;flex-wrap:wrap;}
+:is(#report,.rpb) .ccard h3 .chip{margin-left:0;font-size:.68rem;padding:1px 8px;}
+:is(#report,.rpb) .cnum{font-size:1.6rem;margin:4px 0 2px;}
+:is(#report,.rpb) .overview{padding:8px 12px;}
+:is(#report,.rpb) .overview .radar{display:block;width:460px;max-width:100%;height:auto;margin:0 auto;}
+:is(#report,.rpb) .head{padding-bottom:0;margin-bottom:6px;}
+:is(#report,.rpb) .head .who{font-size:2rem;}
+:is(#report,.rpb) section.block{margin-top:22px;}
+:is(#report,.rpb) .sbox{padding:10px 14px;}
+:is(#report,.rpb) .overall{margin-top:10px;padding:10px 14px;}
+:is(#report,.rpb) .mimgs{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+:is(#report,.rpb) .mimgs img{width:100%;height:300px;max-height:none;object-fit:contain;background:var(--surface);}
+:is(#report,.rpb) .mcmp .mimgs img{height:260px;}
+:is(#report,.rpb) .ccard .ruler{margin:10px 0 4px;}
+:is(#report,.rpb) .ccard .zl{font-size:.66rem;}
 .ccard .cpos{font-size:.74rem;color:var(--muted);margin:0;text-align:right;}
 .ccard .cref{display:flex;justify-content:space-between;gap:8px;font-size:.82rem;color:var(--muted);margin:0;}
 .ccard .cv{font-size:.88rem;margin:6px 0 0;line-height:1.55;}
@@ -549,32 +549,32 @@ section.block>.sub,section.block .sub{font-size:13px;color:var(--muted);margin:6
 .cmphead h2{display:flex;align-items:center;gap:10px;}
 .sec-n{width:26px;height:26px;font-size:13px;font-weight:600;}
 /* 報告頁首 */
-#report .head .who,.head .who{font-family:var(--sans);font-size:28px;font-weight:600;letter-spacing:.04em;line-height:1.3;}
+:is(#report,.rpb) .head .who,.head .who{font-family:var(--sans);font-size:28px;font-weight:600;letter-spacing:.04em;line-height:1.3;}
 .head .meta{font-size:13.5px;color:var(--muted);margin-top:6px;}
 .rbrand{font-size:13px;letter-spacing:.06em;}
 .rbrand .rl{font-size:15px;font-weight:600;letter-spacing:.12em;}
 /* 數據 */
-.cnum,#report .cnum,.mval,.stat b,.sum b{font-family:var(--sans);font-weight:700;letter-spacing:0;font-variant-numeric:tabular-nums lining-nums;line-height:1.15;}
-#report .cnum,.cnum{font-size:30px;}
+.cnum,:is(#report,.rpb) .cnum,.mval,.stat b,.sum b{font-family:var(--sans);font-weight:700;letter-spacing:0;font-variant-numeric:tabular-nums lining-nums;line-height:1.15;}
+:is(#report,.rpb) .cnum,.cnum{font-size:30px;}
 .mval{font-size:28px;}
 .stat b{font-size:32px;}
-.cnum small,.mval small,#report .cnum small{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);margin-left:4px;letter-spacing:0;}
+.cnum small,.mval small,:is(#report,.rpb) .cnum small{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);margin-left:4px;letter-spacing:0;}
 .sbox ul.kv li{font-size:15px;align-items:baseline;}
 .sbox ul.kv li b{font-family:var(--sans);font-size:17px;font-weight:700;}
 .sbox h4{font-size:13px;font-weight:600;color:var(--muted);letter-spacing:.04em;}
 .sbox li{font-size:15px;}
 .overall{font-size:15.5px;line-height:1.65;}
 /* 卡片文字 */
-.ccard h3,#report .ccard h3{font-size:16px;font-weight:600;letter-spacing:.02em;}
+.ccard h3,:is(#report,.rpb) .ccard h3{font-size:16px;font-weight:600;letter-spacing:.02em;}
 .ccard .cv{font-size:14.5px;line-height:1.6;color:var(--ink);}
 .ccard .cref{font-size:13px;color:var(--muted);}
 .mname{font-weight:600;font-size:16px;}
 .mnote{font-size:14px;line-height:1.65;color:var(--muted);}
 .mnote b{font-weight:600;}
-.chip,#report .ccard h3 .chip{font-size:12px;font-weight:600;letter-spacing:.02em;padding:2px 9px;}
-.zl,#report .ccard .zl{font-size:12px;}
-#report .ccard .zl span{overflow:visible;letter-spacing:0;}
-#report .ccard .zl span:not(.on):not(:first-child):not(:last-child){visibility:hidden;}
+.chip,:is(#report,.rpb) .ccard h3 .chip{font-size:12px;font-weight:600;letter-spacing:.02em;padding:2px 9px;}
+.zl,:is(#report,.rpb) .ccard .zl{font-size:12px;}
+:is(#report,.rpb) .ccard .zl span{overflow:visible;letter-spacing:0;}
+:is(#report,.rpb) .ccard .zl span:not(.on):not(:first-child):not(:last-child){visibility:hidden;}
 .zl span.on{font-weight:600;}
 /* 清單與判讀 */
 .citem h3,.issue h3{font-size:15.5px;font-weight:600;}
@@ -620,13 +620,13 @@ legend{font-size:15px;font-weight:600;}
 @media (max-width:860px){
   body{font-size:15px;}
   .ptitle{font-size:24px;}
-  #report .head .who,.head .who{font-size:26px;}
+  :is(#report,.rpb) .head .who,.head .who{font-size:26px;}
   section.block>h2,section.block .cmphead h2{font-size:19px;}
-  #report .cnum,.cnum{font-size:28px;}
+  :is(#report,.rpb) .cnum,.cnum{font-size:28px;}
 }
 @media print{
   body{font-size:11pt;}
-  #report .cnum,.cnum{font-size:22pt;}
+  :is(#report,.rpb) .cnum,.cnum{font-size:22pt;}
 }
 
 /* ===== 色調協調 ===== */
@@ -634,10 +634,10 @@ legend{font-size:15px;font-weight:600;}
 .track i,.track i.risk,.track i.warn,.track i.mid,.track i.good,.track i.great{opacity:1;}
 .track i.dim{background:var(--accent-soft) !important;opacity:.75 !important;}
 .track i.mid:not(.dim){background:#8FB3BC;}
-.ccard,#report .ccard{border-top:3px solid var(--accent-soft);}
-.ccard.good,#report .ccard.good{border-top-color:var(--good);}
-.ccard.warn,#report .ccard.warn{border-top-color:var(--warn);}
-.ccard.risk,#report .ccard.risk{border-top-color:var(--risk);}
+.ccard,:is(#report,.rpb) .ccard{border-top:3px solid var(--accent-soft);}
+.ccard.good,:is(#report,.rpb) .ccard.good{border-top-color:var(--good);}
+.ccard.warn,:is(#report,.rpb) .ccard.warn{border-top-color:var(--warn);}
+.ccard.risk,:is(#report,.rpb) .ccard.risk{border-top-color:var(--risk);}
 .sbox{border-top-width:3px;border-top-color:var(--accent-soft);}
 .sbox.good{border-top-color:var(--great);} .sbox.warn{border-top-color:var(--warn);} .sbox.gold{border-top-color:var(--gold);}
 .chip.mid{background:var(--accent-soft);color:#2F5D67;}
@@ -713,6 +713,195 @@ legend{font-size:15px;font-weight:600;}
 .combo .nod{color:var(--muted);}
 .inbox{display:grid;gap:8px;margin-top:10px;}
 .ibrow{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--surface);}
+
+/* ===== 翻頁報告（A4 分頁） ===== */
+.rpage{
+  --bg:#F4FAFB; --surface:#FFFFFF; --sunken:#E6F4F6; --ink:#1D3540; --muted:#4F6670; --line:#D7EAEE;
+  --accent:#128C9E; --accent-ink:#FFFFFF; --accent-soft:#D4EDF1; --target:#F2AE3D; --prev:#7F97A6; --gold:#F5B33F; --gold-soft:#FFF4DA;
+  --risk:#E0676B; --warn:#E9962E; --mid:#A9BEC4; --good:#2AA198; --great:#128C9E;
+  --risk-soft:#FCEAEA; --warn-soft:#FFF2DE; --good-soft:#DDF1F0; color-scheme:light;
+  width:794px;height:1123px;box-sizing:border-box;background:#fff;color:var(--ink);
+  display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:30px 44px 26px;overflow:hidden;
+  font-family:var(--sans);font-size:15.5px;line-height:1.6;text-align:left;}
+.rph,.rpf{display:flex;justify-content:space-between;gap:12px;font-size:11.5px;color:var(--muted);letter-spacing:.04em;}
+.rph{border-bottom:1px solid var(--gold);padding-bottom:6px;margin-bottom:16px;}
+.rpf{border-top:1px solid var(--gold);padding-top:6px;margin-top:10px;}
+.rpage.first .rph{visibility:hidden;height:0;padding:0;margin:0;border:0;}
+.rpb{overflow:hidden;min-height:0;display:flow-root;}
+.rpb>:first-child,.rpz>:first-child,.rpb [data-shell]>:first-child{margin-top:0 !important;}
+.rpz{transform-origin:0 0;display:flow-root;}
+.rpb [data-shell].cont{margin-top:0 !important;}
+.rpage.cover{padding:0;display:block;background:#F4FAFB;}
+.rpb .summary{grid-template-columns:repeat(3,minmax(0,1fr));}
+.rpb .phase{grid-template-columns:56px 1fr;gap:14px;}
+.rpb .mcmp{grid-template-columns:1fr 1fr;}
+.rpb .sumgrid{grid-template-columns:repeat(3,minmax(0,1fr));}
+.rpb .sumgrid.two{grid-template-columns:1fr 1fr;}
+.rpb .motisum{grid-template-columns:200px 1fr;}
+.rpage .rpb .head .who{font-size:2rem !important;}
+.rpage .rpb section.block>h2,.rpage .rpb section.block .cmphead h2{font-size:20px !important;}
+.rpage .rpb .cnum{font-size:1.6rem !important;}
+.rpb .noexport,.rpb tr.off{display:none !important;}
+.rpb select{appearance:none;-webkit-appearance:none;border:0;background:none;padding:0;font:inherit;color:inherit;}
+#bookHost,#bookExport{position:fixed;left:-30000px;top:0;width:794px;pointer-events:none;}
+#report.bk-src{position:fixed;left:-30000px;top:0;width:706px;pointer-events:none;}
+/* 檢視器 */
+.fbook{margin-top:4px;user-select:none;-webkit-user-select:none;}
+.fbook[hidden]{display:none;}
+.fb-stage{position:relative;display:flex;justify-content:center;touch-action:pan-y;}
+.fb-frame{position:relative;}
+.fb-scale{position:absolute;left:0;top:0;width:794px;height:1123px;transform-origin:0 0;perspective:2600px;}
+.fb-scale .rpage{position:absolute;left:0;top:0;display:none;transform-origin:0 50%;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  box-shadow:0 1px 2px rgba(20,60,70,.08),0 10px 30px rgba(20,60,70,.14);border-radius:2px;cursor:pointer;}
+.fb-scale .rpage.on{display:grid;} .fb-scale .rpage.cover.on{display:block;}
+.fb-scale .rpage::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,0) 40%,rgba(0,0,0,.06));}
+.fb-scale .rpage.turning::after{animation:fbshade .65s ease-in-out;}
+@keyframes fbshade{50%{opacity:1;}}
+.fb-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);
+  font-size:24px;line-height:1;cursor:pointer;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;z-index:3;}
+.fb-arrow:disabled{opacity:.3;cursor:default;}
+.fb-arrow.prev{left:-6px;} .fb-arrow.next{right:-6px;}
+.fb-bar{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.fb-num{font-size:14px;color:var(--muted);min-width:92px;text-align:center;font-variant-numeric:tabular-nums;}
+.fb-dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:10px;}
+.fb-dots button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--surface);font-size:12.5px;cursor:pointer;color:var(--muted);padding:0;}
+.fb-dots button.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600;}
+.fbook.max{position:fixed;inset:0;z-index:1000;margin:0;background:#13242A;display:flex;flex-direction:column;padding:16px 16px calc(12px + env(safe-area-inset-bottom,0px));}
+.fbook.max .fb-stage{flex:1;min-height:0;align-items:center;}
+.fbook.max .fb-num{color:#DDEBEE;}
+.fbook.max .fb-arrow.prev{left:8px;} .fbook.max .fb-arrow.next{right:8px;}
+.fbook.max .fb-dots{display:none;}
+body.fb-lock{overflow:hidden;}
+@media (max-width:860px){.fb-arrow{display:none;}}
+#printHost{display:none;}
+@media print{
+  @page{size:A4;margin:0;}
+  html.pbook body{background:#fff;}
+  html.pbook .shell,html.pbook .rlogin,html.pbook #book{display:none !important;}
+  html.pbook #printHost{display:block;}
+  #printHost .rpage{break-after:page;page-break-after:always;}
+  #printHost .rpage:last-child{break-after:auto;page-break-after:auto;}
+}
+
+/* ===== 綜合分數（頁首右側） ===== */
+:is(#report,.rpb) .head{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:18px;align-items:center;}
+:is(#report,.rpb) .head>.who,:is(#report,.rpb) .head>.meta{grid-column:1;}
+.csbadge{grid-column:2;grid-row:1/span 2;text-align:center;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:6px 16px 7px;background:var(--surface);min-width:118px;}
+.cslbl{font-size:.72rem;color:var(--muted);letter-spacing:.12em;}
+.csnum{font-size:2.3rem;font-weight:700;line-height:1.05;color:var(--accent);font-variant-numeric:tabular-nums;}
+.csnum small{font-size:.8rem;color:var(--muted);font-weight:500;margin-left:2px;}
+.csnum.warn{color:var(--warn);} .csnum.risk{color:var(--risk);}
+.csdelta{font-size:.74rem;font-weight:600;color:var(--muted);} .csdelta.up{color:#11867F;} .csdelta.down{color:#C84C52;}
+.csstage{margin-top:4px;font-size:.78rem;background:var(--gold-soft);border-radius:6px;padding:1px 8px;}
+.cspart{font-size:.66rem;color:var(--muted);margin-top:1px;}
+.cscut{font-size:.64rem;color:var(--muted);margin-top:2px;white-space:nowrap;}
+.sumgrid.one{grid-template-columns:1fr;}
+.sbox ul.kv.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:22px;}
+.sbox ul.kv.cols li{border-bottom:0;}
+.rpb .overview{padding:4px 10px !important;}
+/* 報告頁面密度 */
+.rpage{font-size:14.5px;line-height:1.5;}
+.rpage .rpb section.block{margin-top:14px !important;}
+.rpage .rpb section.block>.cmphead,.rpage .rpb section.block>h2{margin-bottom:6px;}
+.rpage .rpb .cmphead p,.rpage .rpb section.block>p.sub,.rpage .rpb .desc{margin-top:2px;margin-bottom:8px;line-height:1.45;}
+.rpage .rpb .ccards{gap:8px !important;}
+.rpage .rpb .ccard{padding:9px 11px !important;}
+.rpage .rpb .ccard .cv{margin-top:4px;line-height:1.45;}
+.rpage .rpb .citem,.rpage .rpb .issue{padding-top:7px;padding-bottom:7px;}
+.rpage .rpb .citem+.citem,.rpage .rpb .issue+.issue{margin-top:6px;}
+.rpage .rpb .overall{margin-top:8px !important;padding:7px 12px !important;}
+.rpage .rpb .sbox{padding:8px 12px !important;}
+.rpage .rpb .sbox ul.kv li{padding:3px 0;}
+.rpage .rpb .metric{padding-top:8px;padding-bottom:8px;}
+.rpage .rpb td,.rpage .rpb th{padding-top:5px;padding-bottom:5px;}
+.rpage .rpb .sub3{margin:14px 0 6px;}
+.overview.ov2{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:14px 22px;align-items:center;}
+.ov2 .ovr .radar{width:100% !important;max-width:400px;}
+.ovt h4{margin:0 0 6px;font-size:.95rem;color:var(--ink);}
+.ovt p{margin:0 0 6px;font-size:.86rem;line-height:1.55;color:var(--muted);}
+.ovt p b{color:var(--ink);}
+.ovt .legend{display:grid;gap:4px;justify-content:start;margin-top:10px;font-size:.84rem;}
+@media (max-width:560px){.overview.ov2{grid-template-columns:1fr;}}
+.rpb .overview.ov2{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) !important;}
+.rpb section.block:has(>.metric){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:10px;align-content:start;}
+.rpb section.block:has(>.metric)>*:not(.metric){grid-column:1/-1;}
+.rpb section.block>.metric{margin:0 0 8px !important;}
+.rpb .metric .mval{font-size:1.15rem;}
+@media (max-width:560px){.sbox ul.kv.cols{grid-template-columns:1fr;} .sbox ul.kv.cols li{border-bottom:1px solid var(--line);}}
+.rpb .sbox ul.kv.cols{grid-template-columns:repeat(3,minmax(0,1fr)) !important;} .rpb .sbox ul.kv.cols li{border-bottom:0 !important;}
+/* ===== 左欄可收起的區塊 ===== */
+.coll{position:relative;}
+.ctog{position:absolute;right:0;top:10px;width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--surface);cursor:pointer;color:var(--muted);padding:0;display:flex;align-items:center;justify-content:center;}
+.ctog::before{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(2px) rotate(-135deg);transition:transform .2s;}
+.coll.closed>.ctog::before,.coll.closed>.chead>.ctog::before{transform:translateY(-2px) rotate(45deg);}
+fieldset.coll>.ctog{top:-15px;}
+.ctog:hover{color:var(--ink);border-color:var(--accent);}
+.coll>legend,.coll>.chead{cursor:pointer;user-select:none;padding-right:40px;}
+.coll.closed>.cbody{display:none;}
+.csum{display:none;}
+.coll.closed .csum{display:block;}
+#basicSum{font-size:.88rem;color:var(--muted);margin:2px 40px 0 0;line-height:1.5;}
+#basicSum b{color:var(--ink);font-weight:600;}
+#basicSum .miss{color:var(--risk);font-weight:600;}
+.chead{position:relative;font-weight:700;font-size:.95rem;min-height:30px;display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;}
+.tgrp{margin-top:16px;border-top:1px solid var(--line);padding-top:10px;}
+.tgrp>.chead>.ctog,.coll>.chead>.ctog{top:50%;transform:translateY(-50%);}
+.chead .csum{font-weight:400;font-size:.84rem;color:var(--muted);width:100%;}
+.chead .csum .ok{color:var(--good);font-weight:600;}
+.mcard .coll>.chead.subhead{margin-bottom:0;}
+/* ===== 收起整個輸入欄，只留報告 ===== */
+.ptog{display:inline-flex;align-items:center;gap:6px;}
+.ptog .pti{width:16px;height:12px;border:1.6px solid currentColor;border-radius:3px;position:relative;}
+.ptog .pti::before{content:"";position:absolute;left:4px;top:0;bottom:0;border-left:1.6px solid currentColor;}
+.app.nopanel{grid-template-columns:minmax(0,1fr);max-width:1080px;}
+.app.nopanel>.panel{display:none;}
+.app.nopanel .ptog{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);}
+.scard>.chead{margin:0;font-size:1.05rem;}
+.scard>.cbody{margin-top:10px;}
+.scard.closed{padding-top:12px;padding-bottom:12px;}
+#setNorms details.norms{margin-top:0;border-radius:14px;padding:12px 18px;}
+#setNorms details.norms>summary{list-style:none;position:relative;font-size:1.05rem;padding-right:40px;min-height:30px;display:flex;align-items:center;}
+#setNorms details.norms>summary::-webkit-details-marker{display:none;}
+#setNorms details.norms>summary::after{content:"";position:absolute;right:0;top:50%;width:30px;height:30px;margin-top:-15px;border:1px solid var(--line);border-radius:8px;box-sizing:border-box;
+  background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4.5l4 4 4-4' fill='none' stroke='%237F97A6' stroke-width='2'/%3E%3C/svg%3E") center/12px no-repeat;}
+#setNorms details.norms[open]>summary::after{transform:rotate(180deg);}
+#setNorms details.norms[open]>summary{margin-bottom:8px;}
+.fwarn{margin:4px 0 0;font-size:.78rem;color:var(--warn);font-weight:600;}
+/* ===== 報告頁面精緻化（翻頁、PDF、列印） ===== */
+/* 卡片：最後一排不足 4 張時自動撐滿寬度，不留空格 */
+.rpage .rpb .ccards{display:flex !important;flex-wrap:wrap;gap:8px !important;}
+.rpage .rpb .ccards>*{flex:1 1 calc(25% - 8px);min-width:calc(25% - 8px);box-sizing:border-box;}
+/* 短段落清單：兩欄排列，單數最後一項撐滿 */
+.rpage .rpb .issues,.rpage .rpb .clist,.rpage .rpb .plist{display:grid !important;grid-template-columns:1fr 1fr;gap:8px !important;}
+.rpage .rpb .plist>li:last-child:nth-child(odd){grid-column:1/-1;}
+.rpage .rpb .plist li{align-content:flex-start;}
+.rpage .rpb .issues>li,.rpage .rpb .clist>li{margin:0 !important;}
+.rpage .rpb .issues>li:last-child:nth-child(odd),.rpage .rpb .clist>li:last-child:nth-child(odd){grid-column:1/-1;}
+.rpage .rpb .issue h3,.rpage .rpb .citem h3{font-size:.95rem;margin:0 0 3px;}
+.rpage .rpb .issue p,.rpage .rpb .citem p{font-size:.86rem;line-height:1.5;margin:2px 0 0;}
+/* Moti 風險指數框與右側表格等高 */
+.rpage .rpb .motisum{align-items:stretch !important;}
+.rpage .rpb .motisum>:first-child{display:flex;flex-direction:column;justify-content:center;}
+/* 雷達圖縮小一點 */
+.rpage .rpb .ov2 .ovr .radar{max-width:340px;}
+.rpage .rpb .overview.ov2{grid-template-columns:360px minmax(0,1fr) !important;}
+.rpage .rpb .overview.ov2{padding:6px 14px !important;}
+/* 章節標題：編號圓點 + 細線延伸到右邊 */
+.rpage .rpb .cmphead h2{display:flex;align-items:center;gap:8px;letter-spacing:.02em;}
+.rpage .rpb .cmphead h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent);margin-left:6px;}
+.rpage .rpb .sec-n{flex:none;}
+.rpage .rpb .sub3{display:flex;align-items:center;gap:8px;font-size:1rem;color:var(--ink);}
+.rpage .rpb .sub3::before{content:"";width:4px;height:1em;border-radius:2px;background:var(--accent);}
+/* 頁首：姓名區與分數 */
+.rpage .rpb .head{padding-bottom:10px;border-bottom:2px solid var(--gold);margin-bottom:4px;}
+.rpage .rpb .head .who{letter-spacing:.06em;}
+/* 頁尾註解 */
+.rpage .rpb .foot{font-size:.74rem;line-height:1.55;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:14px;}
+.rpage .rpb .radar{overflow:visible;}
+.rpage .rpb .radar text[font-size="13"]{font-size:18px;}
+.rpage .rpb .ov2 .ovr{padding:2px 8px;}
+.rpage .rpb .ovt p{font-size:.82rem;margin-bottom:4px;}
+.rpage .rpb .motisum>:only-child{grid-column:1/-1;flex-direction:row !important;align-items:center;justify-content:flex-start !important;gap:18px;}
 .rlogin{position:fixed;inset:0;z-index:999;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:20px;}
 .rbox{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 24px;width:min(380px,100%);display:grid;gap:12px;box-shadow:var(--shadow);}
 .rbox h1{font-size:20px;margin:0;line-height:1.35;} .rbox p{margin:0;color:var(--muted);font-size:14px;}
@@ -866,14 +1055,11 @@ legend{font-size:15px;font-weight:600;}
     <p class="msg" id="allMsg"></p>
   </div>
   <div class="card" id="ownNormsCard">
-    <h2 class="ch">從自家資料計算參考值</h2>
-    <p class="hint">用中心已儲存的檢測，依性別與年齡層算出這個群體的平均與標準差。每位會員只取最近一次檢測，避免同一人重複計算。人數達到門檻的格子，可以一鍵套用成報告的參考值。</p>
+    <h2 class="ch">參考值（自家資料自動計算）</h2>
+    <p class="hint"><b>規則：有公開標準就用公開標準，沒有的才用中心自己的資料。</b>公開標準在下方「參考標準」表，另外 SMI 判定標準（女 5.7、男 7.0 kg/m²）、握力 AWGS 2025 門檻、國健署成人體脂肪率標準照舊。</p>
+    <p class="hint">表格裡空白的格子（例如 18 歲以下的 IMTP、18 歲以下的 200 毫秒出力比例），會用中心的檢測資料自動計算：每位會員只取最近一次檢測，依性別與年齡層分組，人數達到門檻才啟用；不足時顯示「參考值建立中」。想讓某一格改用自家資料，把參考標準表裡那一格清空即可。</p>
     <div class="sctl">
-      <label>資料範圍<span class="inwrap"><select id="onScope"></select></span></label>
-      <label>套用到<span class="inwrap"><select id="onTarget"><option value="gen">一般族群參考值</option><option value="ath">運動員參考值</option></select></span></label>
-      <label>最少人數<span class="inwrap"><select id="onMin"><option value="20">20 人</option><option value="30" selected>30 人</option><option value="50">50 人</option></select></span></label>
-      <button type="button" class="btn primary" id="onCalc">計算</button>
-      <button type="button" class="btn" id="onApply" disabled>套用人數足夠的項目</button>
+      <label>每格最少人數<span class="inwrap"><select id="onMin"><option value="20">20 人</option><option value="30">30 人</option><option value="50">50 人</option></select></span></label>
     </div>
     <p class="msg" id="onMsg" style="min-height:0"></p>
     <div id="onOut"></div>
@@ -915,15 +1101,17 @@ legend{font-size:15px;font-weight:600;}
         <div class="hb"><button type="button" class="btn sm" id="mcEdit">編輯</button> <button type="button" class="btn sm" id="mcBack">換人</button></div>
       </div>
       <div class="info" id="mcNote"></div>
-      <div class="subhead">檢測紀錄</div>
-      <ul class="hist" id="hist"></ul>
+      <div class="coll" data-coll="hist"><div class="chead subhead">檢測紀錄<span class="csum" id="histSum"></span><button type="button" class="ctog" aria-expanded="true" aria-label="收起／展開"></button></div>
+      <div class="cbody"><ul class="hist" id="hist"></ul></div></div>
     </div>
   </section>
 
   <!-- 檢測表單 -->
   <form id="form" autocomplete="off" onsubmit="return false">
-    <fieldset>
-      <legend id="formTitle">本次檢測</legend>
+    <fieldset class="coll" data-coll="basic">
+      <legend id="formTitle">本次檢測</legend><button type="button" class="ctog" aria-expanded="true" aria-label="收起／展開"></button>
+      <div class="csum" id="basicSum"></div>
+      <div class="cbody">
       <p class="hint">標示「必填」的欄位填好就會產生報告；其他檢測依當天實際有做的填寫，沒做的留空即可，不會被當成低分。</p>
       <div class="tools">
         <button type="button" class="btn" id="demo">填入範例</button>
@@ -937,8 +1125,11 @@ legend{font-size:15px;font-weight:600;}
         <div class="field"><label for="height">身高</label><div class="inwrap"><input id="height" type="number" inputmode="decimal" step="0.1"><span class="u">cm</span></div></div>
         <div class="field"><label for="weight">體重<span class="req">必填</span></label><div class="inwrap"><input id="weight" type="number" inputmode="decimal" step="0.1"><span class="u">kg</span></div></div>
       </div>
+      </div>
     </fieldset>
 
+    <div class="coll tgrp" data-coll="tests"><div class="chead">檢測項目數據<span class="csum" id="testsSum"></span><button type="button" class="ctog" aria-expanded="true" aria-label="收起／展開"></button></div>
+    <div class="cbody">
     <div class="ttabs" id="testTabs" role="tablist" aria-label="檢測項目">
       <button type="button" data-tab="inbody" class="on">InBody 身體組成</button>
       <button type="button" data-tab="grip">握力 HGS</button>
@@ -1029,6 +1220,7 @@ legend{font-size:15px;font-weight:600;}
       <div id="motiFind"></div>
       <div class="field full" style="margin-top:10px"><label for="motiNote">教練補充說明（會出現在兩種報告上）</label><div class="inwrap"><textarea id="motiNote" rows="3" placeholder="例如：右肩較高，客人表示常用右肩背包包"></textarea></div></div>
     </fieldset>
+    </div></div>
 
     <div class="actions" id="saveRow" hidden>
       <button type="button" class="btn primary" id="saveTest">儲存檢測紀錄</button>
@@ -1041,15 +1233,21 @@ legend{font-size:15px;font-weight:600;}
 <!-- ========== 報告 ========== -->
 <main class="report">
   <div class="rtools" id="rtools" hidden>
+    <button type="button" class="btn ptog" id="panelTog" aria-pressed="false"><span class="pti"></span><span class="ptl">收起輸入欄</span></button>
     <span class="seg" role="group" aria-label="報告版本"><button type="button" data-mode="client" class="on">客戶版</button><button type="button" data-mode="pro">專業版</button></span>
+    <span class="seg" id="viewSeg" role="group" aria-label="檢視方式"><button type="button" data-view="book">翻頁</button><button type="button" data-view="scroll">完整頁面</button></span>
     <button type="button" class="btn" id="btnPrint">列印</button>
     <button type="button" class="btn" id="btnShare">分享</button>
     <button type="button" class="btn" id="btnPdf">下載報告 PDF</button>
-    <button type="button" class="btn" id="btnPng">下載報告圖片</button>
     <button type="button" class="btn" id="btnCsvOne" hidden>匯出這位會員數據（CSV）</button>
     <span class="msg" id="repMsg"></span>
   </div>
   <div id="report" aria-live="polite"></div>
+  <div id="book" class="fbook" hidden>
+    <div class="fb-stage"><button type="button" class="fb-arrow prev" aria-label="上一頁">‹</button><div class="fb-frame"><div class="fb-scale"></div></div><button type="button" class="fb-arrow next" aria-label="下一頁">›</button></div>
+    <div class="fb-bar"><button type="button" class="btn fb-prev">‹ 上一頁</button><span class="fb-num"></span><button type="button" class="btn fb-next">下一頁 ›</button><button type="button" class="btn fb-max">全螢幕翻閱</button></div>
+    <div class="fb-dots"></div>
+  </div>
 </main>
 </div>
 </section>
@@ -1067,9 +1265,11 @@ var TABS={inbody:["fat","visceral","smi","asm","smm","legR","legL"],grip:["hgs",
 var sub="report", reportMode="client", pendingView=false, BRAND={logo:""};
 var TAB_NAME={inbody:"InBody 身體組成",grip:"握力 HGS",imtp:"IMTP 最大肌力",cmj:"CMJ 反向跳躍",sj:"SJ 蹲跳",bal:"平衡測試",moti:"Moti 姿勢評估"};
 var BLD_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V6l8-3 8 3v14"/><path d="M9 20v-5h6v5"/><path d="M8 9h1.5M14.5 9H16M8 12.5h1.5M14.5 12.5H16"/></svg>';
-var RANGES={smm:[5,60,"kg"],smmLo:[5,60,"kg"],smmHi:[5,60,"kg"],height:[100,220,"cm"],weight:[15,200,"kg"],age:[6,105,"歲"],fat:[3,65,"%"],smi:[3,13,"kg/m²"],asm:[5,45,"kg"],legR:[2,20,"kg"],legL:[2,20,"kg"],gripR:[2,80,"kg"],gripL:[2,80,"kg"],pf:[150,5000,"N"],pfLp:[30,70,"%"],f100:[0,5000,"N"],f200:[0,5000,"N"],cmjH:[1,70,"cm"],cmjPow:[200,6000,"W"],cmjRsi:[0.05,1.2,""],cmjLp:[30,70,"%"],sjH:[1,70,"cm"],balL:[50,4000,"mm"],balR:[50,4000,"mm"],balEC:[50,4000,"mm"],visceral:null,hgs:null};
+var RANGES={smm:[5,60,"kg"],smmLo:[5,60,"kg"],smmHi:[5,60,"kg"],height:[100,220,"cm"],weight:[15,200,"kg"],age:[6,105,"歲"],fat:[3,65,"%"],smi:[3,13,"kg/m²"],asm:[5,45,"kg"],legR:[2,20,"kg"],legL:[2,20,"kg"],gripR:[2,80,"kg"],gripL:[2,80,"kg"],pf:[150,5000,"N"],pfLp:[30,70,"%"],f100:[0,5000,"N"],f200:[0,5000,"N"],cmjH:[1,70,"cm"],cmjPow:[200,6000,"W"],cmjRsi:[0.05,1.2,""],cmjLp:[30,70,"%"],sjH:[1,70,"cm"],balL:[50,4000,"mm"],balR:[50,4000,"mm"],balEC:[50,4000,"mm"],visceral:null,hgs:null,motiRisk:[0,100,""]};
 function leftPct(d){if(d.pfLp!=null&&d.pfLp>0&&d.pfLp<100) return d.pfLp; if(d.pfL!=null&&d.pfR!=null&&d.pfL+d.pfR>0) return d.pfL/(d.pfL+d.pfR)*100; return null;}
 var STR={name:1,sex:1,vtype:1,date:1,hgsType:1};
+var lastSkipped=[];
+function fieldLabel(id){var e=$(id), f=e&&e.closest(".field"), l=f&&f.querySelector("label"); return l?l.textContent.replace(/必填/g,"").trim():id;}
 var BANDS=["6","9","12","15","18","23","30","40","50","60","70","80"];
 var BAND_LABEL={"6":"國小低年級（6–8 歲）","9":"國小中高年級（9–11 歲）","12":"國中（12–14 歲）","15":"高中（15–17 歲）","18":"大專（18–22 歲）","23":"23–29 歲","30":"30–39 歲","40":"40–49 歲","50":"50–59 歲","60":"60–69 歲","70":"70–79 歲","80":"80 歲以上"};
 var DEFAULT_NORMS={
@@ -1083,10 +1283,12 @@ var DEFAULT_NORMS={
        F:{"6":[20,6],"9":[23,6],"12":[25,6],"15":[27,6],"18":[27,6],"23":[28,6],"30":[28,5.5],"40":[30,5.5],"50":[32,5.5],"60":[33,5.5],"70":[34,5.5],"80":[33,5.5]}},
   cmj:{M:{"6":[16,4],"9":[21,4.5],"12":[27,5.5],"15":[33,6],"18":[37,6.5],"23":[36,6.5],"30":[34,6],"40":[31,6],"50":[26,5.5],"60":[21,5],"70":[16,4.5],"80":[12,4]},
        F:{"6":[15,3.5],"9":[19,4],"12":[22,4.5],"15":[25,4.5],"18":[26,5],"23":[26,5],"30":[24,4.5],"40":[21,4.5],"50":[17,4],"60":[13.5,3.5],"70":[10.5,3],"80":[8,3]}},
-  ath:{imtp:{M:{},F:{}},grip:{M:{},F:{}},smi:{M:{},F:{}},fat:{M:{},F:{}},cmj:{M:{},F:{}}}
+  ratio:{M:{"6":null,"9":null,"12":null,"15":null,"18":[62,11],"23":[62,11],"30":[62,11],"40":[62,11],"50":[62,11],"60":[62,11],"70":[62,11],"80":[62,11]},
+         F:{"6":null,"9":null,"12":null,"15":null,"18":[62,11],"23":[62,11],"30":[62,11],"40":[62,11],"50":[62,11],"60":[62,11],"70":[62,11],"80":[62,11]}},
+  ath:{imtp:{M:{},F:{}},grip:{M:{},F:{}},smi:{M:{},F:{}},fat:{M:{},F:{}},cmj:{M:{},F:{}},ratio:{M:{},F:{}}}
 };
 function mergeNorms(n){var o=JSON.parse(JSON.stringify(DEFAULT_NORMS));
-  function mg(dst,src){["imtp","grip","smi","fat","cmj"].forEach(function(k){if(!(src&&src[k]))return;["M","F"].forEach(function(sx){var ss=src[k][sx]; if(!ss) return; Object.keys(ss).forEach(function(bb){if(BANDS.indexOf(bb)<0) return; var t=ss[bb]; if(Array.isArray(t)&&(t[0]!=null||t[1]!=null)) dst[k][sx][bb]=t;});});});}
+  function mg(dst,src){["imtp","grip","smi","fat","cmj","ratio"].forEach(function(k){if(!(src&&src[k]))return; dst[k]=dst[k]||{M:{},F:{}};["M","F"].forEach(function(sx){var ss=src[k][sx]; if(!ss) return; Object.keys(ss).forEach(function(bb){if(BANDS.indexOf(bb)<0) return; var t=ss[bb]; if(t===null||Array.isArray(t)) dst[k][sx][bb]=t;});});});}
   mg(o,n); if(n&&n.ath) mg(o.ath,n.ath); return o;}
 var NORM_KEY="imtp-inbody-norms-v1";
 var norms=clone(DEFAULT_NORMS);
@@ -1110,15 +1312,16 @@ function today(){var t=new Date();return t.getFullYear()+"-"+String(t.getMonth()
 function ageAt(birth,date){var b=new Date(birth+"T00:00:00"),t=new Date((date||today())+"T00:00:00");if(isNaN(b)||isNaN(t))return null;var a=t.getFullYear()-b.getFullYear(),m=t.getMonth()-b.getMonth();if(m<0||(m===0&&t.getDate()<b.getDate()))a--;return a;}
 function daysBetween(a,b){return Math.round((new Date(b+"T00:00:00")-new Date(a+"T00:00:00"))/86400000);}
 function band(age){return age<9?"6":age<12?"9":age<15?"12":age<18?"15":age<23?"18":age<30?"23":age<40?"30":age<50?"40":age<60?"50":age<70?"60":age<80?"70":"80";}
-var curPop="gen", usedAth=false, usedGen=false, USE_EST=false;
-try{USE_EST=localStorage.getItem("sa-use-est")==="1";}catch(e){}
+var curPop="gen", usedAth=false, usedGen=false, USE_EST=false, OWN={gen:{},ath:{}};
 function isCustom(m,sx,bb,t){var def=DEFAULT_NORMS[m]&&DEFAULT_NORMS[m][sx]&&DEFAULT_NORMS[m][sx][bb]; return !def||t[0]!==def[0]||t[1]!==def[1];}
 function okN(t){return !!(t&&t[0]!=null&&t[1]>0);}
+/* 參考值規則：有公開標準就用公開標準（設定頁的參考標準表，可修改或清空）；沒有的格子才用中心自家資料（人數達門檻才啟用） */
+function pubN(pop,m,sex,bb){var base=pop==="ath"?norms.ath:norms; var t=base&&base[m]&&base[m][sex]&&base[m][sex][bb]; return okN(t)?t:null;}
+function ownN(pop,m,sex,bb){var t=OWN[pop]&&OWN[pop][m]&&OWN[pop][m][sex]&&OWN[pop][m][sex][bb]; return t&&t[1]>0?t:null;}
+function nSrc(m,sex,bb){var a=curPop==="ath"; if(a&&pubN("ath",m,sex,bb)) return "公開標準"; if(a&&ownN("ath",m,sex,bb)) return "中心自家資料"; return pubN("gen",m,sex,bb)?"公開標準":"中心自家資料";}
 function getN(m,sex,bb){
-  if(curPop==="ath"&&norms.ath){var a=norms.ath[m]&&norms.ath[m][sex]&&norms.ath[m][sex][bb]; if(okN(a)){usedAth=true; return a;}}
-  var t=norms[m]&&norms[m][sex]&&norms[m][sex][bb];
-  if(!okN(t)||(!USE_EST&&!isCustom(m,sex,bb,t))) return null;
-  if(curPop==="ath") usedGen=true; return t;
+  if(curPop==="ath"){var a=pubN("ath",m,sex,bb)||ownN("ath",m,sex,bb); if(a){usedAth=true; return a;}}
+  var t=pubN("gen",m,sex,bb)||ownN("gen",m,sex,bb); if(t&&curPop==="ath") usedGen=true; return t;
 }
 function erf(x){var s=x<0?-1:1;x=Math.abs(x);var t=1/(1+0.3275911*x);var y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x);return s*y;}
 function pct(z){return Math.max(1,Math.min(99,Math.round(50*(1+erf(z/Math.SQRT2)))));}
@@ -1279,9 +1482,9 @@ function imgTag(id,cls){
 }
 function imgsHTML(ids){return '<div class="mimgs">'+(ids||[]).map(function(id){return imgTag(id,"");}).join("")+'</div>';}
 
-function cutScale(cut,mean,sd){
+function cutScale(cut,mean,sd,lowLbl){
   var r2=function(v){return Math.round(v*100)/100;}, a=Math.max(cut+0.01,mean+0.67*sd), b=Math.max(a+0.01,mean+1.28*sd);
-  return {min:r2(cut-3*sd),zones:[{to:cut,label:"低肌肉症",tone:"risk"},{to:r2(a),label:"正常",tone:"mid"},{to:r2(b),label:"良好",tone:"good"},{to:r2(b+1.5*sd),label:"優秀",tone:"great"}]};
+  return {min:r2(cut-3*sd),zones:[{to:cut,label:lowLbl||"低肌肉症",tone:"risk"},{to:r2(a),label:"正常",tone:"mid"},{to:r2(b),label:"良好",tone:"good"},{to:r2(b+1.5*sd),label:"優秀",tone:"great"}]};
 }
 function awgsCut(k,sex,age){
   if(k==="mass") return age>=18?(sex==="M"?7.0:5.7):null;
@@ -1410,7 +1613,7 @@ function axisValues(d,sex,age){
   function mk(v,dp,unit,avg,sd,dir,pre){return {v:v,dp:dp,unit:unit,avg:avg,sd:sd,dir:dir,pre:pre||"",z:dir*(v-avg)/sd,target:avg+dir*sd};}
   o.__noref={};
   if(r.rel!=null){N=getN("imtp",sex,bb); if(N) o.str=mk(r.rel,1,"N/kg",N[0],N[1],1); else o.__noref.str={v:r.rel,dp:1,unit:"N/kg"};}
-  if(r.ratio!=null){if(USE_EST) o.exp=mk(r.ratio,0,"%",62,11,1); else o.__noref.exp={v:r.ratio,dp:0,unit:"%"};}
+  if(r.ratio!=null){N=getN("ratio",sex,bb); if(N) o.exp=mk(r.ratio,0,"%",N[0],N[1],1); else o.__noref.exp={v:r.ratio,dp:0,unit:"%"};}
   if(r.asym!=null) o.bal=mk(r.asym,1,"%",7.5,5,-1,"差 ");
   if(r.hgs!=null){N=getN("grip",sex,bb); var k=r.hgsType==="sum"?2:1; if(N) o.grip=mk(r.hgs,1,"kg",N[0]*k,N[1]*k,1); else o.__noref.grip={v:r.hgs,dp:1,unit:"kg"};}
   if(r.smi!=null){N=getN("smi",sex,bb); if(N) o.mass=mk(r.smi,2,"kg/m²",N[0],N[1],1); else o.__noref.mass={v:r.smi,dp:2,unit:"kg/m²"};}
@@ -1507,7 +1710,7 @@ function overviewHTML(av,pav,prevDate){
       '<span class="sbar"><i style="width:'+w+'%"></i><b></b><s></s></span></div>';}).join("");
   return '<section class="block"><h2>與同齡平均比較</h2><p class="sub">以同齡平均為基準、標準差（SD）為刻度：虛線圓是同齡平均，藍線是目標（+1 SD，約贏過同齡 84% 的人）。圖形越往外越好，體脂肪率越低、左右差異越小也會往外。</p>'+
     '<div class="overview"><div>'+radarSVG(av,pav)+'<div class="legend center"><span><i class="lg-cur"></i>本次實測</span><span><i class="lg-tg"></i>目標（+1 SD）</span>'+(pav?'<span><i class="lg-prev"></i>'+esc(prevDate.replace("，","（"))+'）</span>':'')+'<span><i class="lg-avg"></i>同齡平均</span></div></div><div><div class="srows">'+rows+'</div>'+
-    '<p class="cmpnote">長條中間的線是同齡平均，右側的線是目標（+1 SD）。爆發力與左右差異的平均和標準差為估計值。</p></div></div></section>';
+    '<p class="cmpnote">長條中間的線是同齡平均，右側的線是目標（+1 SD）。同齡平均有公開標準時用公開標準，沒有的才用中心自家資料。</p></div></div></section>';
 }
 function rawSpark(vals,avg,dp){
   var W=260,H=100,l=8,r=34,t=16,b=10,n=vals.length, have=vals.filter(function(v){return v!=null;});
@@ -1551,7 +1754,11 @@ function trendHTML(points){
 function render(){
   curPop=selected&&selected.cat==="ath"?"ath":"gen"; usedAth=false; usedGen=false;
   updateTabDots();
-  var d={};["name","sex"].concat(TEST).forEach(function(id){d[id]=v(id);});
+  var d={}; lastSkipped=[];
+  ["name","sex"].concat(TEST).forEach(function(id){var x=v(id);
+    /* 超出合理範圍的數值（多半是打錯）不放進報告與分數，輸入欄會標紅提醒 */
+    if(x!=null&&!STR[id]&&RANGES.hasOwnProperty(id)&&checkField(id)){lastSkipped.push(id); x=null;}
+    d[id]=x;});
   d.moti=curMoti;
   var gR=d.gripR, gL=d.gripL;
   if(gR!==null||gL!==null){d.hgs=Math.max(gR||0,gL||0); d.hgsType="max";}
@@ -1580,14 +1787,14 @@ function render(){
   }
   if(pf!==null&&d.f200!==null&&pf>bw){
     var ratio=(d.f200-bw)/(pf-bw)*100;
-    if(!USE_EST){cards.str+=plainCard("下肢爆發力（200 毫秒出力比例）",f0(ratio),"%",'0.2 秒內能用出最大力量的 '+f0(ratio)+'%，比例越高，絆到時越來得及反應。目前沒有正式常模，請與自己的歷次結果比較。');}
+    var rN=getN("ratio",d.sex,b);
+    if(!rN){cards.str+=plainCard("下肢爆發力（200 毫秒出力比例）",f0(ratio),"%",'0.2 秒內能用出最大力量的 '+f0(ratio)+'%，比例越高，絆到時越來得及反應。'+BAND_LABEL[b]+'自家參考值建立中，請與自己的歷次結果比較。');}
     else{
-    var exScale={min:20,zones:[{to:45,label:"不足",tone:"risk"},{to:55,label:"偏低",tone:"warn"},{to:70,label:"平均",tone:"mid"},{to:80,label:"良好",tone:"good"},{to:100,label:"優秀",tone:"great"}]};
-    var ez=zoneOf(exScale,ratio); tally(ez.tone); if(ez.tone==="risk"||ez.tone==="warn") flags.lowExp=ez.tone;
+    var exZ=(ratio-rN[0])/rN[1], ez=zoneOf(Z_ZONES,exZ); tally(ez.tone); if(ez.tone==="risk"||ez.tone==="warn") flags.lowExp=ez.tone;
     var rfd=(d.f200-bw)/0.2, extra="";
     if(d.f100!==null){extra='；100 毫秒時已用到 '+f0(Math.max(0,(d.f100-bw)/(pf-bw)*100))+'%';}
-    cards.str+=metric("下肢爆發力（200 毫秒出力比例）",f0(ratio),"%",exScale,Math.min(99.9,Math.max(20,ratio)),
-      '起跑 0.2 秒內能用出最大力量的 <b>'+f0(ratio)+'%</b>'+extra+'。RFD 0–200 毫秒約 '+f0(rfd)+' N/s。同齡平均約 <b>62%</b>（估計值）。比例越高，滑倒或絆到時越來得及反應。',62.5);
+    cards.str+=metric("下肢爆發力（200 毫秒出力比例）",f0(ratio),"%",Z_ZONES,exZ,
+      '起跑 0.2 秒內能用出最大力量的 <b>'+f0(ratio)+'%</b>'+extra+'。RFD 0–200 毫秒約 '+f0(rfd)+' N/s。同齡'+sexTxt+'約<b>第 '+pct(exZ)+' 百分位</b>（同齡平均 <b>'+f0(rN[0])+'%</b>，'+nSrc("ratio",d.sex,b)+'）。比例越高，滑倒或絆到時越來得及反應。',0);
     }
   }
   var lp=leftPct(d), rp=lp!=null?100-lp:null;
@@ -1635,7 +1842,7 @@ function render(){
   if(d.fat!==null&&youth){
     var fyn=getN("fat",d.sex,b);
     if(fyn){var fyz=(d.fat-fyn[0])/fyn[1], fyzz=zoneOf(Z_ZONES,Math.max(-2.49,Math.min(2.49,-fyz))); tally(fyzz.tone); if(fyz>=1.28) flags.highFat=fyz>=1.65?"risk":"warn";
-      cards.body+=metric("體脂肪率",f1(d.fat),"%",Z_ZONES,Math.max(-2.49,Math.min(2.49,-fyz)),'同齡'+sexTxt+'參考約 <b>'+fyn[0]+'%</b>（估計值）。兒童與青少年的體脂肪會隨發育變化，成人的健康標準不適用，建議搭配 BMI 生長曲線一起判讀。',0);}
+      cards.body+=metric("體脂肪率",f1(d.fat),"%",Z_ZONES,Math.max(-2.49,Math.min(2.49,-fyz)),'同齡'+sexTxt+'參考約 <b>'+fyn[0]+'%</b>（'+nSrc("fat",d.sex,b)+'）。兒童與青少年的體脂肪會隨發育變化，成人的健康標準不適用，建議搭配 BMI 生長曲線一起判讀。',0);}
     else cards.body+=plainCard("體脂肪率",f1(d.fat),"%",'此年齡層沒有同齡參考值。');
   }else if(d.fat!==null){
     var fScale=M?{min:5,zones:[{to:10,label:"過低",tone:"warn"},{to:17,label:"偏低",tone:"mid"},{to:23,label:"標準",tone:"good"},{to:25,label:"偏高",tone:"warn"},{to:40,label:"過高",tone:"risk"}]}
@@ -1678,7 +1885,7 @@ function render(){
     else{
     var gz=(hand-gn[0])/gn[1], gzz=zoneOf(Z_ZONES,gz); tally(gzz.tone);
     cards.grip+=metric("握力 HGS"+(gR!==null||gL!==null?"（兩手較大值）":hType==="sum"?"（雙手合計）":"（單手最大）"),f1(d.hgs),"kg",Z_ZONES,gz,
-      (gR!==null||gL!==null?'右手 <b>'+(gR!==null?f1(gR):"—")+'</b>／左手 <b>'+(gL!==null?f1(gL):"—")+'</b> kg。':'')+(hType==="sum"?'換算單手平均約 <b>'+f1(hand)+' kg</b>。':'')+'同齡'+sexTxt+'約<b>第 '+pct(gz)+' 百分位</b>（同齡參考單手 <b>'+gn[0]+' kg</b>，估計值'+(hType==="sum"?'，雙手合計約 '+f1(gn[0]*2)+' kg':'')+'）。'+(!awgsOn?'AWGS 2025 肌少症門檻適用於 50 歲以上，此年齡不套用。':'AWGS 2025 門檻（'+(awgsMid?'50–64 歲':'65 歲以上')+'）：單手低於 <b>'+gripCut+' kg</b>'+(hType==="sum"?'（約等於雙手合計 '+gripCut*2+' kg）':'')+(hand<gripCut?'，<b>目前低於門檻</b>':'，目前在門檻以上')+'。'),0);
+      (gR!==null||gL!==null?'右手 <b>'+(gR!==null?f1(gR):"—")+'</b>／左手 <b>'+(gL!==null?f1(gL):"—")+'</b> kg。':'')+(hType==="sum"?'換算單手平均約 <b>'+f1(hand)+' kg</b>。':'')+'同齡'+sexTxt+'約<b>第 '+pct(gz)+' 百分位</b>（同齡參考單手 <b>'+gn[0]+' kg</b>，'+nSrc("grip",d.sex,b)+(hType==="sum"?'，雙手合計約 '+f1(gn[0]*2)+' kg':'')+'）。'+(!awgsOn?'AWGS 2025 肌少症門檻適用於 50 歲以上，此年齡不套用。':'AWGS 2025 門檻（'+(awgsMid?'50–64 歲':'65 歲以上')+'）：單手低於 <b>'+gripCut+' kg</b>'+(hType==="sum"?'（約等於雙手合計 '+gripCut*2+' kg）':'')+(hand<gripCut?'，<b>目前低於門檻</b>':'，目前在門檻以上')+'。'),0);
     }
   }
 
@@ -1689,7 +1896,7 @@ function render(){
   }else if(d.cmjH!==null){
     var jn=getN("cmj",d.sex,b), jz=(d.cmjH-jn[0])/jn[1], jzz=zoneOf(Z_ZONES,jz); tally(jzz.tone);
     if(jzz.tone==="risk"||jzz.tone==="warn") flags.lowJump=jzz.tone;
-    var jnote='同齡'+sexTxt+'約<b>第 '+pct(jz)+' 百分位</b>（同齡平均約 <b>'+jn[0]+' cm</b>，估計值）。跳躍高度反映腿部爆發力，和走路速度、上下樓梯與跨步反應有關。';
+    var jnote='同齡'+sexTxt+'約<b>第 '+pct(jz)+' 百分位</b>（同齡平均約 <b>'+jn[0]+' cm</b>，'+nSrc("cmj",d.sex,b)+'）。跳躍高度反映腿部爆發力，和走路速度、上下樓梯與跨步反應有關。';
     if(d.cmjPow!==null) jnote+='峰值功率 '+f0(d.cmjPow)+' W，約 <b>'+f1(d.cmjPow/d.weight)+' W/kg</b>。';
     if(d.cmjRsi!==null) jnote+='RSImod <b>'+d.cmjRsi.toFixed(2)+'</b>（跳躍高度 ÷ 起跳時間，越高代表出力越快）。';
     jumpCards+=metric("反向跳躍高度（CMJ）",f1(d.cmjH),"cm",Z_ZONES,jz,jnote,0);
@@ -1982,21 +2189,86 @@ function comboHTML(c,cd,d,num){
   return '<section class="block">'+secH(num,"三項檢測綜合分析")+'<p class="sub">把 InBody、測力板與 Moti 的結果放在一起看，找出互相印證的重點</p>'+tbl+
     '<ul class="clist" style="margin-top:12px">'+ins.slice(0,4).map(function(x){return '<li class="citem '+(x.tone==="risk"?"risk":x.tone==="warn"?"warn":x.tone==="good"?"good":"")+'"><h3>'+esc(x.t)+'</h3><p>'+esc(x.ev)+'</p><p class="adv">建議：'+esc(x.a)+'</p></li>';}).join("")+'</ul></section>';
 }
+function axZone(k,x,d,b){
+    var fsc=k==="fat"?fatScale(d.sex,d.age,b):null;
+    var acut=(k==="mass"||k==="grip")?awgsCut(k,d.sex,d.age):null;
+    if(acut!=null&&k==="grip"&&x.unit==="kg"&&x.avg>acut*1.6) acut=acut*2;
+    var csc=acut!=null?cutScale(acut,x.avg,x.sd,k==="grip"?"握力不足":"低肌肉症"):null;
+    var psc=k==="mcore"?extScale("core"):k==="mbal"?extScale("bal"):k==="smm"?{min:x.pl-12,zones:[{to:x.pl,label:"偏低",tone:"warn"},{to:x.ph,label:"理想",tone:"good"},{to:x.ph+10,label:"優秀",tone:"great"}]}:k==="post"?MOTI_SCALE:k==="visc"?(x.unit==="cm²"?{min:0,zones:[{to:100,label:"標準",tone:"good"},{to:150,label:"偏高",tone:"warn"},{to:250,label:"過高",tone:"risk"}]}:{min:1,zones:[{to:10,label:"標準",tone:"good"},{to:15,label:"偏高",tone:"warn"},{to:20,label:"過高",tone:"risk"}]}):k==="bmi"?{min:15,zones:[{to:18.5,label:"過輕",tone:"warn"},{to:24,label:"正常",tone:"good"},{to:27,label:"過重",tone:"warn"},{to:35,label:"肥胖",tone:"risk"}]}:null;
+    if(psc) fsc=null;
+    var sc=psc?psc:k==="bal"?asymScale():k==="exp"?EX_SCALE:fsc?fsc:csc?csc:Z_ZONES;
+    var rx=psc?Math.min(psc.zones[psc.zones.length-1].to-0.01,Math.max(psc.min,k==="smm"?x.pct:x.v)):k==="bal"?Math.min(29.9,x.v):k==="exp"?Math.min(99.9,Math.max(20,x.v)):(fsc||csc)?Math.min(sc.zones[sc.zones.length-1].to-0.01,Math.max(sc.min,x.v)):Math.max(-2.49,Math.min(2.49,x.z));
+    var ravg=psc?(k==="mcore"?33:k==="mbal"?30:k==="smm"?x.pl:k==="post"?33:k==="visc"?(x.unit==="cm²"?100:10):24):k==="bal"?7.5:k==="exp"?62.5:fsc?(d.age>=18?(d.sex==="M"?25:30):x.avg):csc?x.avg:0, zz=zoneOf(sc,rx);
+    return {fsc:fsc,csc:csc,psc:psc,sc:sc,rx:rx,ravg:ravg,zz:zz};
+}
+/* ---------- 綜合分數 ----------
+   每個面向換成 0–100 分（有同齡常模的用百分位，其他依燈號給分），
+   再依年齡層權重加權。沒有檢測的面向不計入，權重自動分給其他面向。
+   想調整權重或階段門檻，改下面三個設定即可。 */
+var SCORE_DOM=[
+  {k:"body",n:"身體組成",ax:["mass","smm","fat","visc","bmi"]},
+  {k:"str",n:"肌力",ax:["str","grip"]},
+  {k:"pow",n:"爆發力",ax:["exp","jump"]},
+  {k:"bal",n:"平衡",ax:["bal","mbal"]},
+  {k:"post",n:"體態",ax:["post","mcore"]}
+];
+var SCORE_GROUPS=[
+  {to:18, n:"兒童青少年",   w:{body:15,str:20,pow:30,bal:15,post:20}, cut:[80,65,50,35]},
+  {to:40, n:"青壯年",   w:{body:25,str:25,pow:20,bal:10,post:20}, cut:[80,65,50,35]},
+  {to:60, n:"中年",     w:{body:25,str:25,pow:15,bal:15,post:20}, cut:[75,60,45,30]},
+  {to:999,n:"銀髮族",   w:{body:20,str:25,pow:10,bal:30,post:15}, cut:[70,55,40,25]}
+];
+var SCORE_STAGES=["優秀","良好","一般","待加強","需改善"];
+var SCORE_MIN_DOM=2; /* 至少要有幾個面向有資料才顯示綜合分數 */
+var TONE_PTS={great:90,good:75,mid:60,warn:40,risk:20};
+function scoreGroup(age){for(var i=0;i<SCORE_GROUPS.length;i++){if(age<SCORE_GROUPS[i].to) return SCORE_GROUPS[i];} return SCORE_GROUPS[SCORE_GROUPS.length-1];}
+function axScore(k,x,d,b,flags){
+  if(!x) return null;
+  if(k==="post"||k==="mcore"||k==="mbal"){ if(x.v==null||!isFinite(x.v)) return null; return Math.max(0,Math.min(100,100-x.v)); }
+  if(k==="mass"&&flags&&flags.lowMass) return TONE_PTS.risk;
+  var Z=axZone(k,x,d,b);
+  if(Z.sc===Z_ZONES&&x.z!=null&&isFinite(x.z)) return pct(Z.rx);
+  return TONE_PTS[Z.zz.tone]!=null?TONE_PTS[Z.zz.tone]:null;
+}
+function calcScore(av,d,b,flags,balL,balR){
+  if(!av) return null;
+  var g=scoreGroup(d.age), dom={}, tw=0, sum=0;
+  SCORE_DOM.forEach(function(D){
+    var arr=[];
+    D.ax.forEach(function(k){var v=axScore(k,av[k],d,b,flags); if(v!=null) arr.push(v);});
+    if(D.k==="bal"&&balL!=null&&balR!=null&&Math.max(balL,balR)>0){
+      var ba=Math.abs(balL-balR)/Math.max(balL,balR)*100; arr.push(TONE_PTS[zoneOf(asymScale(),Math.min(29.9,ba)).tone]);
+    }
+    if(!arr.length){dom[D.k]=null; if(av.__noref&&D.ax.some(function(k){return av.__noref[k];})) dom[D.k+"_noref"]=true; return;}
+    var v=arr.reduce(function(a,x){return a+x;},0)/arr.length; dom[D.k]=v;
+    tw+=g.w[D.k]; sum+=v*g.w[D.k];
+  });
+  var nd=SCORE_DOM.filter(function(D){return dom[D.k]!=null;}).length;
+  if(!tw||nd<SCORE_MIN_DOM) return null;
+  var total=sum/tw, si=0; while(si<g.cut.length&&total<g.cut[si]) si++;
+  return {total:total,dom:dom,g:g,stage:SCORE_STAGES[si],si:si,n:SCORE_DOM.filter(function(D){return dom[D.k]!=null;}).length};
+}
+function scoreTone(v){return v>=75?"great":v>=60?"good":v>=45?"mid":v>=30?"warn":"risk";}
+function scoreHTML(c,pro){
+  var d=c.d, S=calcScore(c.av,d,c.b,c.flags,d.balL,d.balR);
+  if(!S) return "";
+  var P=null;
+  if(c.pav&&c.pt){var pf=c.pt; P=calcScore(c.pav,{sex:d.sex,age:pf.age!=null?pf.age:d.age},c.b,null,pf.balL,pf.balR);}
+  var tot=Math.round(S.total), dl=P?tot-Math.round(P.total):null, tag=c.pt&&c.pt.date?esc(c.pt.date):"上次";
+  var h='<div class="csbadge"><div class="cslbl">綜合分數</div><div class="csnum '+scoreTone(S.total)+'">'+tot+'<small>/100</small></div>'+
+    (dl!=null?'<div class="csdelta '+(dl>0?"up":dl<0?"down":"")+'">'+(dl===0?'與 '+tag+' 持平':'較 '+tag+' '+(dl>0?'+':'')+dl+' 分')+'</div>':'')+
+    (S.n<SCORE_DOM.length?'<div class="cspart">依 '+S.n+'／'+SCORE_DOM.length+' 個面向</div>':'');
+  if(pro){var g=S.g, cut=g.cut;
+    h+='<div class="csstage"><b>'+S.stage+'</b>｜'+g.n+'</div><div class="cscut">優秀≥'+cut[0]+'・良好≥'+cut[1]+'・一般≥'+cut[2]+'・待加強≥'+cut[3]+'</div>';}
+  return h+'</div>';
+}
 function mergedHTML(c){
   var d=c.d, av=c.av, pav=c.pav, pt=c.pt, cd=derive(d), pd=pt?derive(pt):null, tag=pt?baseTag(pt,d.date):"", pro=reportMode==="pro";
   var good=[], work=[], cards="";
   function J(k,A,B){var m=CMP.find(function(q){return q.k===k;}); if(!m||A==null||B==null) return null; if(k==="hgs"&&pd.hgsType!==cd.hgsType) return null; if(k==="visc"&&pd.vtype!==cd.vtype) return null; return judge(m,B-A,thrOf(m,A,cd));}
   AXES.forEach(function(a){
     var x=av[a.k]; if(!x||a.k==="visc"||a.k==="bmi"||(!pro&&(a.k==="mcore"||a.k==="mbal"))) return; var meta=C_AX[a.k];
-    var fsc=a.k==="fat"?fatScale(d.sex,d.age,c.b):null;
-    var acut=(a.k==="mass"||a.k==="grip")?awgsCut(a.k,d.sex,d.age):null;
-    if(acut!=null&&a.k==="grip"&&x.unit==="kg"&&x.avg>acut*1.6) acut=acut*2;
-    var csc=acut!=null?cutScale(acut,x.avg,x.sd):null;
-    var psc=a.k==="mcore"?extScale("core"):a.k==="mbal"?extScale("bal"):a.k==="smm"?{min:x.pl-12,zones:[{to:x.pl,label:"偏低",tone:"warn"},{to:x.ph,label:"理想",tone:"good"},{to:x.ph+10,label:"優秀",tone:"great"}]}:a.k==="post"?MOTI_SCALE:a.k==="visc"?(x.unit==="cm²"?{min:0,zones:[{to:100,label:"標準",tone:"good"},{to:150,label:"偏高",tone:"warn"},{to:250,label:"過高",tone:"risk"}]}:{min:1,zones:[{to:10,label:"標準",tone:"good"},{to:15,label:"偏高",tone:"warn"},{to:20,label:"過高",tone:"risk"}]}):a.k==="bmi"?{min:15,zones:[{to:18.5,label:"過輕",tone:"warn"},{to:24,label:"正常",tone:"good"},{to:27,label:"過重",tone:"warn"},{to:35,label:"肥胖",tone:"risk"}]}:null;
-    if(psc) fsc=null;
-    var sc=psc?psc:a.k==="bal"?asymScale():a.k==="exp"?EX_SCALE:fsc?fsc:csc?csc:Z_ZONES;
-    var rx=psc?Math.min(psc.zones[psc.zones.length-1].to-0.01,Math.max(psc.min,a.k==="smm"?x.pct:x.v)):a.k==="bal"?Math.min(29.9,x.v):a.k==="exp"?Math.min(99.9,Math.max(20,x.v)):(fsc||csc)?Math.min(sc.zones[sc.zones.length-1].to-0.01,Math.max(sc.min,x.v)):Math.max(-2.49,Math.min(2.49,x.z));
-    var ravg=psc?(a.k==="mcore"?33:a.k==="mbal"?30:a.k==="smm"?x.pl:a.k==="post"?33:a.k==="visc"?(x.unit==="cm²"?100:10):24):a.k==="bal"?7.5:a.k==="exp"?62.5:fsc?(d.age>=18?(d.sex==="M"?25:30):x.avg):csc?x.avg:0, zz=zoneOf(sc,rx);
+    var Z=axZone(a.k,x,d,c.b), fsc=Z.fsc, csc=Z.csc, psc=Z.psc, sc=Z.sc, rx=Z.rx, ravg=Z.ravg, zz=Z.zz;
     var tn=zz.tone==="great"?"good":zz.tone, st=[zz.label,tn];
     if(a.k==="mass"&&c.flags.lowMass) st=["低肌肉症","risk"];
     else if(a.k==="mass"&&x.awgs) st=["肌肉正常","good"];
@@ -2007,7 +2279,7 @@ function mergedHTML(c){
     if(st[1]==="good") good.push({n:meta.n,v:vtxt,z:x.z}); if(st[1]==="warn"||st[1]==="risk") work.push({n:meta.n,v:vtxt,z:x.z});
     if(a.k==="post"||a.k==="visc"||a.k==="bmi") return;
     cards+='<div class="ccard '+st[1]+'"><h3>'+meta.n+'<span class="chip '+(st[0]===zz.label?zz.tone:st[1])+'">'+st[0]+'</span></h3><div class="cnum">'+(a.k==="bal"?"差 ":"")+fmt(x.v,x.dp)+'<small>'+x.unit+(a.k==="smm"?'・'+f1(x.pct)+'%':'')+'</small></div>'+
-      ruler(sc,rx,ravg)+'<p class="cref">'+(a.k==="mcore"?"Moti：0–33 維持、34–66 警惕、67 以上危險":a.k==="mbal"?"Moti：0–30 維持、31–60 警惕、61 以上危險":a.k==="smm"?"佔體重 "+f1(x.pct)+"%（理想 "+x.pl+"–"+x.ph+"%）；一般 "+(d.sex==="M"?"29–33":"20–24")+" kg，規律運動 "+(d.sex==="M"?"35":"26")+" kg 以上":a.k==="post"?"Moti Physio：0–33 維持、34–66 警惕、67 以上危險":a.k==="visc"?(x.unit==="cm²"?"InBody 建議低於 100 cm²":"InBody 建議 9 級以下，10 級以上偏高"):a.k==="bmi"?"國健署：18.5–24 正常，24–27 過重，27 以上肥胖":a.k==="bal"?"一般成人 5–10%，10% 內理想":a.k==="mass"&&x.awgs?(d.sex==="M"?"男性":"女性")+" "+x.awgs.toFixed(1)+" kg/m² 以上為正常，以下為低肌肉症":a.k==="fat"&&d.age>=18?"標準 "+(d.sex==="M"?"17–23%":"20–27%")+"，≥"+(d.sex==="M"?25:30)+"% 為肥胖（國健署）":a.k==="fat"?"同齡參考 "+fmt(x.avg,1)+"%（估計值）":"同齡參考 "+fmt(x.avg,x.dp)+(x.unit==="%"?"%":" "+x.unit))+'</p>'+
+      ruler(sc,rx,ravg)+'<p class="cref">'+(a.k==="mcore"?"Moti：0–33 維持、34–66 警惕、67 以上危險":a.k==="mbal"?"Moti：0–30 維持、31–60 警惕、61 以上危險":a.k==="smm"?"佔體重 "+f1(x.pct)+"%（理想 "+x.pl+"–"+x.ph+"%）；一般 "+(d.sex==="M"?"29–33":"20–24")+" kg，規律運動 "+(d.sex==="M"?"35":"26")+" kg 以上":a.k==="post"?"Moti Physio：0–33 維持、34–66 警惕、67 以上危險":a.k==="visc"?(x.unit==="cm²"?"InBody 建議低於 100 cm²":"InBody 建議 9 級以下，10 級以上偏高"):a.k==="bmi"?"國健署：18.5–24 正常，24–27 過重，27 以上肥胖":a.k==="bal"?"一般成人 5–10%，10% 內理想":a.k==="mass"&&x.awgs?(d.sex==="M"?"男性":"女性")+" "+x.awgs.toFixed(1)+" kg/m² 以上為正常，以下為低肌肉症":a.k==="fat"&&d.age>=18?"標準 "+(d.sex==="M"?"17–23%":"20–27%")+"，≥"+(d.sex==="M"?25:30)+"% 為肥胖（國健署）":a.k==="fat"?"同齡參考 "+fmt(x.avg,1)+"%（"+nSrc("fat",c.d.sex,c.b)+"）":"同齡參考 "+fmt(x.avg,x.dp)+(x.unit==="%"?"%":" "+x.unit))+'</p>'+
       '<p class="cv">'+esc(a.k==="mcore"||a.k==="mbal"?extInterp(a.k==="mcore"?"core":"bal",zz.label):a.k==="smm"?smmInterp(zz.label,x,d):a.k==="post"?postInterp(curMoti,zz.label):a.k==="visc"?(zz.tone==="good"?"內臟脂肪在建議範圍內。":"內臟脂肪"+zz.label+"，和血糖、血脂、血壓問題相關，建議搭配有氧運動與飲食調整。"):a.k==="bmi"?(zz.label==="正常"?"BMI 在正常範圍。":"BMI "+zz.label+"，請搭配體脂肪率一起判讀。"):a.k==="fat"&&fsc?fatInterp(zz.label,x.v,d):axInterp(a.k,st[1]==="good"?"good":st[1]==="mid"?"mid":"low",x,c))+'</p></div>';
   });
   if(av.__noref) Object.keys(av.__noref).forEach(function(k){var x=av.__noref[k], meta=C_AX[k]; if(!meta) return;
@@ -2035,18 +2307,19 @@ function mergedHTML(c){
   var overall=(work.length?"整體功能以"+work.slice(0,2).map(function(w){return w.n;}).join("、")+"為主要改善重點":"各項已檢測指標大致在同齡參考範圍內")+
     (must.length?"；另有篩檢提醒，建議進一步評估":"")+(pd?(nUp?"。較"+(tag||"上次")+"有 "+nUp+" 項超過測量誤差的改善":"。較"+(tag||"上次")+"大致持平"):"")+"。";
   // 頁首
-  var html='<div class="rbrand"><span class="rl">'+logoHTML()+'曼齡診所</span><span>個人化健康與運動功能評估報告</span></div>';
-  html+='<header class="head"><h2 class="who">'+esc(c.name)+'</h2><div class="meta">'+(d.date?'檢測日期 '+esc(d.date)+'｜':'')+c.sexTxt+' '+d.age+' 歲'+(selected&&selected.cat==="ath"?'｜運動員'+(selected.sport?'（'+esc(selected.sport)+'）':''):'')+'｜與 '+BAND_LABEL[c.b]+c.sexTxt+(curPop==="ath"&&usedAth?'運動員':'')+'比較'+(curPop==="ath"&&!usedAth?'（尚無運動員參考值，暫以一般同齡比較）':curPop==="ath"&&usedGen?'（部分項目暫以一般同齡比較）':'')+'</div></header>';
+  var html='<div class="rbrand"><span class="rl">曼齡診所</span><span>個人化健康與運動功能評估報告</span></div>';
+  html+='<header class="head"><h2 class="who">'+esc(c.name)+'</h2><div class="meta">'+(d.date?'檢測日期 '+esc(d.date)+'｜':'')+c.sexTxt+' '+d.age+' 歲'+(selected&&selected.cat==="ath"?'｜運動員'+(selected.sport?'（'+esc(selected.sport)+'）':''):'')+'｜與 '+BAND_LABEL[c.b]+c.sexTxt+(curPop==="ath"&&usedAth?'運動員':'')+'比較'+(curPop==="ath"&&!usedAth?'（尚無運動員參考值，暫以一般同齡比較）':curPop==="ath"&&usedGen?'（部分項目暫以一般同齡比較）':'')+'</div>'+scoreHTML(c,pro)+'</header>';
   // 1 摘要
   function li(x){return '<li>'+esc(x.n)+'<b>'+esc(x.v)+'</b></li>';}
-  html+='<section class="block">'+secH(1,"本次檢測摘要")+'<div class="sumgrid two">'+
-    '<div class="sbox good"><h4>表現較好</h4>'+(good.length?'<ul class="kv">'+good.slice(0,3).map(li).join("")+'</ul>':'<p class="none">—</p>')+'</div>'+
-    '<div class="sbox warn"><h4>需要留意</h4>'+(work.length?'<ul class="kv">'+work.slice(0,3).map(li).join("")+'</ul>':'<p class="none">無</p>')+'</div></div>'+
+  var gBox='<div class="sbox good"><h4>表現較好</h4>'+(good.length?'<ul class="kv'+(work.length?'':' cols')+'">'+good.slice(0,3).map(li).join("")+'</ul>':'<p class="none">—</p>')+'</div>';
+  var wBox='<div class="sbox warn"><h4>需要留意</h4>'+(work.length?'<ul class="kv'+(good.length?'':' cols')+'">'+work.slice(0,3).map(li).join("")+'</ul>':'<p class="none">無</p>')+'</div>';
+  html+='<section class="block">'+secH(1,"本次檢測摘要")+'<div class="sumgrid '+(good.length&&work.length?'two':'one')+'">'+
+    (good.length?gBox:'')+(work.length?wBox:'')+(!good.length&&!work.length?gBox:'')+'</div>'+
     '<p class="overall">'+overall+'</p></section>';
   // 2 身體能力評估
   var rsvg=radarSVG(av,pav);
-  html+='<section class="block">'+secH(2,"身體能力評估")+(rsvg?'<p class="sub">越往外代表數值越高。虛線是標準線：肌肉量、握力在虛線外側為達標；體脂肪率、左右差異在虛線內側較理想。橘色為理想目標。</p><div class="overview"><div>'+rsvg+
-    '<div class="legend center"><span><i class="lg-cur"></i>本次</span><span><i class="lg-avg"></i>標準線</span><span><i class="lg-tg"></i>理想目標</span>'+(pav?'<span><i class="lg-prev"></i>'+esc(tag||"基準")+'</span>':'')+'</div></div></div>':'')+
+  html+='<section class="block">'+secH(2,"身體能力評估")+(rsvg?'<div class="overview ov2"><div class="ovr">'+rsvg+'</div><div class="ovt"><h4>怎麼看這張圖</h4><p>越往外代表數值越高。</p><p>虛線是標準線：肌肉量、握力在虛線<b>外側</b>為達標；體脂肪率、左右差異在虛線<b>內側</b>較理想。</p><p>橘色為理想目標，藍色面積越接近橘線越好。</p>'+
+    '<div class="legend"><span><i class="lg-cur"></i>本次</span><span><i class="lg-avg"></i>標準線</span><span><i class="lg-tg"></i>理想目標</span>'+(pav?'<span><i class="lg-prev"></i>'+esc(tag||"基準")+'</span>':'')+'</div></div></div>':'')+
     '<div class="ccards"'+(rsvg?' style="margin-top:14px"':'')+'>'+cards+'</div>';
   if(pro){
     var rows="";
@@ -2170,20 +2443,20 @@ var normsPop="gen";
 function normsHTML(){
   var SRC=normsPop==="ath"?norms.ath:norms;
   function rows(metric){
-    return BANDS.map(function(bb){return '<tr><td>'+BAND_LABEL[bb]+'</td>'+["F","M"].map(function(s){var n=SRC[metric][s][bb];
+    return BANDS.map(function(bb){return '<tr><td>'+BAND_LABEL[bb]+'</td>'+["F","M"].map(function(s){var n=SRC[metric]&&SRC[metric][s]?SRC[metric][s][bb]:null;
       var a0=n&&n[0]!=null?n[0]:"", a1=n&&n[1]!=null?n[1]:"";
       return '<td><input data-p="'+normsPop+'" data-m="'+metric+'" data-s="'+s+'" data-b="'+bb+'" data-i="0" type="number" step="0.1" value="'+a0+'" placeholder="無" aria-label="'+sexWord(s)+BAND_LABEL[bb]+'平均"></td><td><input data-p="'+normsPop+'" data-m="'+metric+'" data-s="'+s+'" data-b="'+bb+'" data-i="1" type="number" step="0.1" value="'+a1+'" placeholder="無" aria-label="'+sexWord(s)+BAND_LABEL[bb]+'標準差"></td>';}).join("")+'</tr>';}).join("");
   }
   var head='<tr><th rowspan="2">年齡</th><th colspan="2">女性</th><th colspan="2">男性</th></tr><tr><th>平均</th><th>標準差</th><th>平均</th><th>標準差</th></tr>';
-  return '<details class="norms noexport"><summary>參考標準（可自行調整）</summary><p class="hint">'+(db?'修改後會存在雲端，所有能開啟這個頁面的工作人員都會套用。':'修改後會記在這台裝置的瀏覽器裡。')+'百分位以平均與標準差計算。下列表格中，只有 SMI 判定標準（女 5.7、男 7.0）、握力門檻（AWGS 2025）與成人體脂肪標準（國健署）屬於正式標準，且不在此表內；表中的同齡平均值目前都沒有正式常模，為依文獻推估，建議累積自家資料後修正。18 歲以下的參考值為依文獻整理的估計值；顯示「無」的年齡層沒有可靠資料，報告會改成只顯示數值，有可靠資料時可自行填入。</p>'+
-    '<div class="estbox"><b>還沒有自家參考值的項目</b><label><input type="radio" name="estMode" value="0"'+(USE_EST?'':' checked')+'> 不做同齡比較，只看個人前後變化（建議）</label><label><input type="radio" name="estMode" value="1"'+(USE_EST?' checked':'')+'> 暫時使用文獻推估值比較</label><p class="hint" style="margin:4px 0 0">不論選哪一個，SMI 判定標準、AWGS 握力門檻、國健署體脂肪標準、內臟脂肪與左右差異的判讀都照常使用；用「從自家資料計算參考值」套用的數值也一律會採用。</p></div>'+
+  return '<details class="norms noexport"><summary>參考標準（公開標準，可修改）</summary><p class="hint">有數值的格子，報告會用這裡的同齡平均 ± 標準差計算百分位；<b>清空的格子改用中心自家資料</b>（人數達門檻才啟用）。'+(window.REMOTE_API?'修改後會存在雲端，所有工作人員都會套用。':'修改後會跟會員資料存在一起。')+'按「恢復預設值」可回到系統內建數值。</p>'+
     '<div class="seg" role="group" aria-label="參考族群" style="margin:4px 0 10px"><button type="button" data-npop="gen" class="'+(normsPop==="gen"?"on":"")+'">一般族群</button><button type="button" data-npop="ath" class="'+(normsPop==="ath"?"on":"")+'">運動員</button></div>'+
     (normsPop==="ath"?'<p class="hint">運動員參考值預設空白，可依專項、校隊或歷年選手資料填入。空白的項目，運動員會自動以一般同齡比較。</p>':'')+
-    '<h4>等長中段拉 相對峰值力量（N/kg）</h4><div class="normwrap"><table>'+head+rows("imtp")+'</table></div>'+
+    '<h4>等長中段拉 相對峰值力量（N/kg，文獻估計值）</h4><div class="normwrap"><table>'+head+rows("imtp")+'</table></div>'+
     '<h4>握力 HGS（單手，kg）</h4><div class="normwrap"><table>'+head+rows("grip")+'</table></div>'+
     '<h4>SMI（kg/m²）</h4><div class="normwrap"><table>'+head+rows("smi")+'</table></div>'+
     '<h4>體脂肪率（%）</h4><div class="normwrap"><table>'+head+rows("fat")+'</table></div>'+
-    '<h4>反向跳躍 CMJ 跳躍高度（cm，估計值）</h4><div class="normwrap"><table>'+head+rows("cmj")+'</table></div>'+
+    '<h4>反向跳躍 CMJ 跳躍高度（cm，文獻估計值）</h4><div class="normwrap"><table>'+head+rows("cmj")+'</table></div>'+
+    '<h4>200 毫秒出力比例（%，文獻估計值）</h4><div class="normwrap"><table>'+head+rows("ratio")+'</table></div>'+
     '<p><button type="button" class="btn" id="resetNorms">恢復預設值</button></p></details>';
 }
 var normsOpen=false;
@@ -2193,11 +2466,15 @@ function saveNorms(){
 }
 function bindNorms(){
   var det=document.querySelector("details.norms"); if(!det) return;
-  det.open=normsOpen; det.addEventListener("toggle",function(){normsOpen=det.open;});
+  det.open=normsOpen; det.addEventListener("toggle",function(){normsOpen=det.open; if(det.closest("#setNorms")){var st=collState(); st["set:norms"]=!det.open; try{localStorage.setItem(COLL_KEY,JSON.stringify(st));}catch(e){}}});
   det.querySelectorAll("input[data-m]").forEach(function(inp){
-    inp.addEventListener("change",function(){var n=parseFloat(inp.value); if(!isFinite(n)||n<=0) return;
-      var base=inp.dataset.p==="ath"?norms.ath:norms, cell=base[inp.dataset.m][inp.dataset.s]; if(!cell[inp.dataset.b]) cell[inp.dataset.b]=[null,null];
-      cell[inp.dataset.b][+inp.dataset.i]=n; saveNorms(); render();});
+    inp.addEventListener("change",function(){
+      var base=inp.dataset.p==="ath"?norms.ath:norms; base[inp.dataset.m]=base[inp.dataset.m]||{M:{},F:{}};
+      var cell=base[inp.dataset.m][inp.dataset.s], bb=inp.dataset.b;
+      if(inp.value.trim()===""){cell[bb]=null; var row=inp.closest("tr"); if(row) [].forEach.call(row.querySelectorAll('input[data-s="'+inp.dataset.s+'"]'),function(x){x.value="";}); saveNorms(); render(); scheduleOwn(); return;}
+      var n=parseFloat(inp.value); if(!isFinite(n)||n<=0) return;
+      if(!cell[bb]) cell[bb]=[null,null];
+      cell[bb][+inp.dataset.i]=n; saveNorms(); render();});
   });
   [].forEach.call(det.querySelectorAll('input[name="estMode"]'),function(r){r.addEventListener("change",function(){USE_EST=r.value==="1"; try{localStorage.setItem("sa-use-est",USE_EST?"1":"0");}catch(e){} if(db) db.doc("config/display").set({cmpShow:SHOW,useEst:USE_EST,updatedAt:Date.now()}).catch(function(){}); render(); renderSettings();});});
   [].forEach.call(det.querySelectorAll("button[data-npop]"),function(b){b.addEventListener("click",function(){normsPop=b.dataset.npop; renderSettings();});});
@@ -2392,69 +2669,69 @@ function uploadLogo(file){
 }
 /* ---------- 自家參考值 ---------- */
 var ON_METRICS=[
-  {k:"imtp",label:"IMTP 相對峰值力量（N/kg）",dp:1,get:function(r){return r.rel;}},
-  {k:"smi",label:"SMI 四肢肌肉量指數（kg/m²）",dp:2,get:function(r){return r.smi;}},
-  {k:"fat",label:"體脂肪率（%）",dp:1,get:function(r){return r.fat;}},
-  {k:"grip",label:"握力（單手最大，kg）",dp:1,get:function(r){return r.hgs==null?null:(r.hgsType==="sum"?r.hgs/2:r.hgs);}},
-  {k:"cmj",label:"反向跳躍高度（cm）",dp:1,get:function(r){return r.cmj;}}
+  {k:"imtp",label:"IMTP 相對峰值力量（N/kg）",dp:1,lo:3,hi:70,get:function(r){return r.rel;}},
+  {k:"smi",label:"SMI 四肢肌肉量指數（kg/m²）",dp:2,lo:3,hi:13,get:function(r){return r.smi;}},
+  {k:"fat",label:"體脂肪率（%）",dp:1,lo:3,hi:65,get:function(r){return r.fat;}},
+  {k:"grip",label:"握力（單手最大，kg）",dp:1,lo:2,hi:80,get:function(r){return r.hgs==null?null:(r.hgsType==="sum"?r.hgs/2:r.hgs);}},
+  {k:"cmj",label:"反向跳躍高度（cm）",dp:1,lo:1,hi:70,get:function(r){return r.cmj;}},
+  {k:"ratio",label:"200 毫秒出力比例（%）",dp:0,lo:0,hi:100,get:function(r){return r.ratio;}}
 ];
-var onLast=null;
-function onInit(){
-  var sel=$("onScope"); if(!sel) return; var cur=sel.value;
-  sel.innerHTML='<option value="">全部會員</option>'+groups().map(function(g){return '<option'+(g===cur?' selected':'')+'>'+esc(g)+'</option>';}).join("")+'<option value="__ath"'+(cur==="__ath"?' selected':'')+'>所有運動員</option><option value="__gen"'+(cur==="__gen"?' selected':'')+'>所有一般會員</option>';
-  if(cur==="__ath") $("onTarget").value="ath";
-}
-function onCalc(){
-  if(!db) return;
-  var scope=$("onScope").value, btn=$("onCalc");
-  var list=members.filter(function(m){return scope===""?true:scope==="__ath"?m.cat==="ath":scope==="__gen"?m.cat!=="ath":m.group===scope;});
-  busy(btn,true,"計算中…"); setMsg("onMsg","");
-  var B={}; ON_METRICS.forEach(function(m){B[m.k]={M:{},F:{}};});
-  var used=0;
-  list.reduce(function(pr,mb){return pr.then(function(){
+var OWN_MIN=(function(){try{var n=+localStorage.getItem("ma-own-min"); return n>0?n:30;}catch(e){return 30;}})();
+var ownT=0, ownSig="", ownLast=null;
+function scheduleOwn(){clearTimeout(ownT); ownT=setTimeout(calcOwn,500);}
+function calcOwn(){
+  if(!db) return Promise.resolve();
+  var B={gen:{},ath:{}}, used={gen:0,ath:0};
+  ["gen","ath"].forEach(function(pp){ON_METRICS.forEach(function(m){B[pp][m.k]={M:{},F:{}};});});
+  return members.reduce(function(pr,mb){return pr.then(function(){
     if(mb.sex!=="M"&&mb.sex!=="F") return;
     return db.doc("members/"+mb.id).collection("tests").get().then(function(snap){
       var ts=snap.docs.map(function(d){return d.data();}).filter(function(t){return t.date;}).sort(function(a,b){return a.date<b.date?-1:1;});
       if(!ts.length) return; var t=ts[ts.length-1];
-      var age=t.age!=null?t.age:memberAge(mb,t.date); if(age==null) return;
-      var r=derive(t), bb=band(age), any=false;
-      ON_METRICS.forEach(function(m){var v=m.get(r); if(v!=null&&isFinite(v)){(B[m.k][mb.sex][bb]=B[m.k][mb.sex][bb]||[]).push(v); any=true;}});
-      if(any) used++;
+      var age=t.age!=null&&t.age!==""?+t.age:memberAge(mb,t.date); if(age==null||isNaN(age)) return;
+      var r=derive(t), bb=band(age), pp=mb.cat==="ath"?"ath":"gen", any=false;
+      ON_METRICS.forEach(function(m){var v=m.get(r); if(v!=null&&isFinite(v)&&(m.lo==null||v>=m.lo)&&(m.hi==null||v<=m.hi)){(B[pp][m.k][mb.sex][bb]=B[pp][m.k][mb.sex][bb]||[]).push(v); any=true;}});
+      if(any) used[pp]++;
     });
   });},Promise.resolve()).then(function(){
-    onLast={B:B,min:+$("onMin").value,scope:scope};
-    $("onOut").innerHTML=onHTML(onLast);
-    var ok=onCount(onLast); $("onApply").disabled=!ok;
-    setMsg("onMsg","共 "+used+" 位會員有檢測資料。"+(ok?"有 "+ok+" 個格子人數足夠，可以套用。":"目前沒有任何格子達到 "+onLast.min+" 人，先累積資料，暫時不建議套用。"),ok?"ok":"");
-  }).catch(function(){setMsg("onMsg","讀取資料失敗，請再試一次。","err");}).finally(function(){busy(btn,false);});
+    var N={gen:{},ath:{}};
+    ["gen","ath"].forEach(function(pp){ON_METRICS.forEach(function(m){N[pp][m.k]={M:{},F:{}}; ["F","M"].forEach(function(sx){
+      Object.keys(B[pp][m.k][sx]).forEach(function(bb){var v=B[pp][m.k][sx][bb]; if(v.length<OWN_MIN) return; var st=statsOf(v), k=Math.pow(10,m.dp);
+        var sd=Math.round(st.sd*k)/k; if(!(sd>0)) return; N[pp][m.k][sx][bb]=[Math.round(st.avg*k)/k,sd,v.length];});
+    });});});
+    ownLast={B:B,used:used};
+    var sig=JSON.stringify(N); if(sig!==ownSig){ownSig=sig; OWN=N; render();}
+    if(page==="settings") renderOwn();
+  }).catch(function(){});
 }
-function onCount(o){var n=0; ON_METRICS.forEach(function(m){["F","M"].forEach(function(sx){Object.keys(o.B[m.k][sx]).forEach(function(bb){if(o.B[m.k][sx][bb].length>=o.min) n++;});});}); return n;}
-function onHTML(o){
-  var tgt=$("onTarget").value==="ath"?norms.ath:norms, h="";
+function ownHTML(){
+  var o=ownLast; if(!o) return '<p class="hint">計算中…</p>';
+  var h="";
   ON_METRICS.forEach(function(m){
-    var bands=BANDS.filter(function(bb){return (o.B[m.k].F[bb]||[]).length||(o.B[m.k].M[bb]||[]).length;});
-    if(!bands.length) return;
-    function cell(sx,bb){
-      var v=o.B[m.k][sx][bb]||[], cur=tgt[m.k]&&tgt[m.k][sx]&&tgt[m.k][sx][bb], curTxt=okN(cur)?cur[0]+' ± '+cur[1]:'無';
-      if(!v.length) return '<td class="nod">—</td><td class="nod">—</td><td class="nod">'+curTxt+'</td>';
-      var st=statsOf(v), enough=v.length>=o.min;
-      return '<td'+(enough?'':' class="nod"')+'>'+v.length+(enough?'':'<br><small>樣本不足</small>')+'</td><td'+(enough?' class="ok"':' class="nod"')+'>'+fmt(st.avg,m.dp)+(v.length>1?' ± '+fmt(st.sd,m.dp):'')+'</td><td class="nod">'+curTxt+'</td>';
+    var rows=BANDS.filter(function(bb){return ["F","M"].some(function(sx){return !pubN("gen",m.k,sx,bb);})&&["gen","ath"].some(function(pp){return (o.B[pp][m.k].F[bb]||[]).length||(o.B[pp][m.k].M[bb]||[]).length;});});
+    if(!rows.length) return;
+    function cell(pp,sx,bb){
+      var v=o.B[pp][m.k][sx][bb]||[], t=OWN[pp]&&OWN[pp][m.k]&&OWN[pp][m.k][sx]&&OWN[pp][m.k][sx][bb], pb=pubN(pp,m.k,sx,bb);
+      if(pb) return '<td class="nod">公開標準<br><small>'+v.length+' 人（備用）</small></td>';
+      if(pp==="ath"&&pubN("gen",m.k,sx,bb)&&!t) return '<td class="nod">—<br><small>用一般公開標準</small></td>';
+      if(!v.length) return '<td class="nod">—</td>';
+      if(t) return '<td class="ok">'+fmt(t[0],m.dp)+' ± '+fmt(t[1],m.dp)+'<br><small>'+v.length+' 人・使用中</small></td>';
+      if(v.length>=OWN_MIN) return '<td class="nod">'+v.length+' 人<br><small>數值差異太小，無法計算</small></td>';
+      return '<td class="nod">'+v.length+' / '+OWN_MIN+' 人<br><small>建立中</small></td>';
     }
-    h+='<h4 style="margin:18px 0 6px">'+m.label+'</h4><div class="tcard"><table class="cmp sumtbl ontbl"><tr><th rowspan="2">年齡層</th><th colspan="3">女性</th><th colspan="3">男性</th></tr><tr><th>人數</th><th>平均 ± 標準差</th><th>目前參考</th><th>人數</th><th>平均 ± 標準差</th><th>目前參考</th></tr>'+
-      bands.map(function(bb){return '<tr><td>'+BAND_LABEL[bb]+'</td>'+cell("F",bb)+cell("M",bb)+'</tr>';}).join("")+'</table></div>';
+    var hasAth=rows.some(function(bb){return (o.B.ath[m.k].F[bb]||[]).length||(o.B.ath[m.k].M[bb]||[]).length;});
+    h+='<h4 style="margin:18px 0 6px">'+m.label+'</h4><div class="tcard"><table class="cmp sumtbl ontbl"><tr><th>年齡層</th><th>一般・女</th><th>一般・男</th>'+(hasAth?'<th>運動員・女</th><th>運動員・男</th>':'')+'</tr>'+
+      rows.map(function(bb){return '<tr><td>'+BAND_LABEL[bb]+'</td>'+cell("gen","F",bb)+cell("gen","M",bb)+(hasAth?cell("ath","F",bb)+cell("ath","M",bb):'')+'</tr>';}).join("")+'</table></div>';
   });
-  return h||'<p class="hint">這個範圍內還沒有可計算的檢測資料。</p>';
+  return h||'<p class="hint">目前沒有需要用自家資料補的格子有檢測資料。沒有公開標準的格子（例如 18 歲以下的 IMTP、200 毫秒出力比例）有會員檢測後，這裡會顯示累積人數。</p>';
 }
-function onApply(){
-  var o=onLast; if(!o) return;
-  var ath=$("onTarget").value==="ath", tgt=ath?norms.ath:norms, n=0;
-  if(!confirm("要用自家資料取代"+(ath?"運動員":"一般族群")+"參考值中、人數達 "+o.min+" 人以上的項目嗎？人數不足的項目維持原本的數值。")) return;
-  ON_METRICS.forEach(function(m){["F","M"].forEach(function(sx){Object.keys(o.B[m.k][sx]).forEach(function(bb){var v=o.B[m.k][sx][bb]; if(v.length<o.min) return; var st=statsOf(v); var k=Math.pow(10,m.dp); tgt[m.k][sx][bb]=[Math.round(st.avg*k)/k,Math.round(st.sd*k)/k]; n++;});});});
-  saveNorms(); render(); renderSettings();
-  $("onOut").innerHTML=onHTML(o);
-  setMsg("onMsg","已套用 "+n+" 個項目，報告會改用中心自己的參考值。","ok");
+function renderOwn(){
+  var sel=$("onMin"); if(sel) sel.value=String(OWN_MIN);
+  var n=0; ["gen","ath"].forEach(function(pp){Object.keys(OWN[pp]||{}).forEach(function(k){["F","M"].forEach(function(sx){Object.keys((OWN[pp][k]||{})[sx]||{}).forEach(function(bb){if(!pubN(pp,k,sx,bb)) n++;});});});});
+  if(ownLast) setMsg("onMsg","目前有 "+(ownLast.used.gen+ownLast.used.ath)+" 位會員的檢測可以計算；"+(n?"已有 "+n+" 個格子達到 "+OWN_MIN+" 人，報告正在使用。":"沒有公開標準的格子還沒達到 "+OWN_MIN+" 人，這些項目暫時只和自己的歷次結果比較。"),n?"ok":"");
+  $("onOut").innerHTML=ownHTML();
 }
-function renderSettings(){onInit(); var b=$("setNorms"); if(!b) return; b.innerHTML=normsHTML(); normsOpen=true; bindNorms();}
+function renderSettings(){var b=$("setNorms"); if(b){b.hidden=false; b.innerHTML=normsHTML(); normsOpen=!collState()["set:norms"]; bindNorms();} renderOwn(); if(!ownLast) calcOwn();}
 function openMemberEditor(m){
   editingMember=m||null;
   $("meTitle").textContent=m?"編輯會員":"新增會員";
@@ -2502,6 +2779,7 @@ function checkField(id){
   if(r&&(x<r[0]||x>r[1])) return "數值不太合理，常見範圍約 "+r[0]+"–"+r[1]+(r[2]?" "+r[2]:"")+"，請再確認。";
   if(id==="f200"){var pf=parseFloat($("pf").value); if(pf&&x>pf) return "200 毫秒力量不會大於峰值力量，請再確認。";}
   if(id==="f100"){var f2=parseFloat($("f200").value); if(f2&&x>f2) return "100 毫秒力量通常小於 200 毫秒力量，請再確認。";}
+  if(id==="pf"){var w=parseFloat($("weight").value); if(w>0&&x<w*9.81*0.9) return "峰值力量低於體重（約 "+Math.round(w*9.81)+" N），請確認單位是牛頓（N）。";}
   return "";
 }
 function updateTabDots(){
@@ -2725,28 +3003,6 @@ function waitImgs(el){
   var timeout=new Promise(function(res){setTimeout(res,6000);});
   return Promise.race([Promise.all(jobs),timeout]).then(function(){return new Promise(function(r){requestAnimationFrame(function(){requestAnimationFrame(r);});});});
 }
-function measureBreaks(el){
-  var rr=el.getBoundingClientRect(), breaks=[];
-  [].forEach.call(el.querySelectorAll(".rbrand,.head,.overview,.metric,.issue,.phase,.tcard tr,.safety,.citem,.ctips li,.mcmp,.cnote,.cnext,.crefer,.done,.pickbar,.plist li,.overall"),function(n){breaks.push(n.getBoundingClientRect().bottom-rr.top+6);});
-  [].forEach.call(el.querySelectorAll("section.block,.trendwrap"),function(n){breaks.push(n.getBoundingClientRect().top-rr.top-6);});
-  [].forEach.call(el.querySelectorAll(".ccards,.trends,.sumgrid,.mimgs"),function(g){
-    var rows={}; [].forEach.call(g.children,function(c){var r=c.getBoundingClientRect(), k=Math.round(r.top); rows[k]=Math.max(rows[k]||0,r.bottom);});
-    Object.keys(rows).forEach(function(k){breaks.push(rows[k]-rr.top+6);});
-  });
-  return {rr:rr,breaks:breaks.filter(function(b){return b>0;}).sort(function(a,b){return a-b;})};
-}
-function captureReport(){
-  var root=document.documentElement, prev=root.getAttribute("data-theme"), el=$("report");
-  return libs().then(function(){return document.fonts&&document.fonts.ready;}).then(function(){
-    root.setAttribute("data-theme","light"); el.classList.add("exporting"); render();
-    return waitImgs(el);
-  }).then(function(){return rasterSvgs(el);}).then(function(){
-    var m=measureBreaks(el);
-    return window.html2canvas(el,{scale:2,backgroundColor:"#ffffff",useCORS:true,logging:false}).then(function(c){
-      var w=m.rr.width; return {canvas:c,breaks:m.breaks,w:w,h:c.height*w/c.width};
-    });
-  }).finally(function(){el.classList.remove("exporting"); if(prev==null) root.removeAttribute("data-theme"); else root.setAttribute("data-theme",prev); render();});
-}
 function busy(btn,on,text){btn.disabled=on; if(on){btn.dataset.t=btn.textContent;btn.textContent=text;} else if(btn.dataset.t){btn.textContent=btn.dataset.t;}}
 function bandImg(left,right,w,h,line){
   var sc=3,c=document.createElement("canvas"); c.width=Math.round(w*sc); c.height=Math.round(h*sc);
@@ -2756,16 +3012,13 @@ function bandImg(left,right,w,h,line){
   if(line){x.strokeStyle="#F5B33F"; x.lineWidth=0.8; x.beginPath(); var y=line==="bottom"?h-0.6:0.6; x.moveTo(0,y); x.lineTo(w,y); x.stroke();}
   return c.toDataURL("image/png");
 }
-function coverCanvas(){
+function coverInner(){
   var pro=reportMode==="pro", name=v("name")||"受測者", date=v("date")||today(), age=v("age"), sx=v("sex")==="M"?"男性":v("sex")==="F"?"女性":"";
   var done=doneList().filter(function(x){return x.has;}).map(function(x){return x.name;});
   function row(k,val){return '<div style="color:#4F6670">'+k+'</div><div style="font-weight:500">'+esc(val||"—")+'</div>';}
-  var el=document.createElement("div");
-  el.setAttribute("aria-hidden","true");
-  el.style.cssText="position:fixed;left:0;top:0;z-index:2147483647;width:794px;height:1123px;background:#F4FAFB;color:#1D3540;font-family:'Noto Sans TC','Noto Sans CJK TC','Microsoft JhengHei','PingFang TC',sans-serif;box-sizing:border-box;overflow:hidden;";
-  el.innerHTML='<div style="height:12px;background:#128C9E"></div><div style="height:3px;background:#F5B33F"></div>'+
+    return '<div style="height:12px;background:#128C9E"></div><div style="height:3px;background:#F5B33F"></div>'+
     '<div style="padding:84px 84px 0">'+
-      '<div style="display:flex;align-items:center;gap:14px;color:#F5B33F">'+(BRAND.logo?'<img src="'+BRAND.logo+'" style="height:58px;width:auto">':BLD_SVG.replace('<svg ','<svg width="50" height="50" '))+'<span style="font-size:26px;font-weight:700;color:#1D3540;letter-spacing:6px">曼齡診所</span></div>'+
+      '<div style="display:flex;align-items:center;gap:14px;color:#F5B33F">'+'<span style="font-size:26px;font-weight:700;color:#1D3540;letter-spacing:6px">曼齡診所</span></div>'+
       '<div style="margin-top:170px;font-size:13px;letter-spacing:4px;color:#F5B33F">PERSONALIZED HEALTH &amp; FUNCTION ASSESSMENT</div>'+
       '<div style="margin-top:16px;font-family:\'Noto Serif TC\',\'Noto Serif CJK TC\',\'Songti TC\',\'PMingLiU\',serif;font-size:44px;font-weight:600;line-height:1.3;letter-spacing:2px">個人化健康與<br>運動功能評估報告</div>'+
       
@@ -2773,46 +3026,328 @@ function coverCanvas(){
         row("姓名",name)+row("性別／年齡",(sx||"")+(age!=null?"　"+age+" 歲":""))+row("檢測日期",date)+(selected&&selected.group?row("群組",selected.group):"")+row("完成項目",done.join("、"))+
       '</div></div>'+
     '<div style="position:absolute;left:84px;right:84px;bottom:64px;font-size:12px;color:#4F6670;line-height:1.8;border-top:1px solid #D7EAEE;padding-top:14px">本報告為運動功能篩檢與訓練規劃參考，不能取代醫療診斷。<br>報告產出日期 '+today()+'</div>';
-  document.body.appendChild(el);
-  return (document.fonts?document.fonts.ready:Promise.resolve()).then(function(){
-    return window.html2canvas(el,{scale:2,backgroundColor:"#F4FAFB",logging:false,width:794,height:1123,windowWidth:1200,scrollX:0,scrollY:0});
-  }).finally(function(){el.remove();});
+}
+function coverPage(){var p=document.createElement("div"); p.className="rpage cover"; p.style.position="relative"; p.style.color="#1D3540"; p.innerHTML=coverInner(); return p;}
+/* ---------- 翻頁報告：把報告切成 A4 頁面，每一頁都是完整區塊，不會切到字或卡片 ---------- */
+var BOOK_W=794, BOOK_H=1123;
+var bookView=(function(){try{return localStorage.getItem("ma-view")==="scroll"?"scroll":"book";}catch(e){return "book";}})();
+var bookPages=[], bookIdx=0, bookT=0, bookGen=0, bookAnim=null, inBookRender=false;
+/* 可以拆開放到下一頁的「容器」；其餘有底色、框線的卡片視為一整塊 */
+var SPLIT_SEL=".tcard,section.block,.ccards,.trends,.sumgrid,.mimgs,.plist,.ctips,table,tbody,ul,ol,.trendwrap";
+var HEAD_SEL="h1,h2,h3,h4,.cmphead,.sub3,.ch";
+function bkHidden(n){
+  if(n.matches(".noexport,tr.off,script,style,template")) return true;
+  return getComputedStyle(n).display==="none";
+}
+function bkSplittable(n){
+  if(n.matches(SPLIT_SEL)) return true;
+  if(!/^(DIV|SECTION|ARTICLE)$/.test(n.tagName)||n.children.length<2) return false;
+  var cs=getComputedStyle(n);
+  if(/flex/.test(cs.display)&&!/column/.test(cs.flexDirection)) return false;
+  var clear=(cs.backgroundColor==="rgba(0, 0, 0, 0)"||cs.backgroundColor==="transparent")&&cs.backgroundImage==="none"&&cs.boxShadow==="none";
+  var bw=parseFloat(cs.borderTopWidth)+parseFloat(cs.borderBottomWidth)+parseFloat(cs.borderLeftWidth)+parseFloat(cs.borderRightWidth);
+  return clear&&bw===0;
+}
+function bkShell(n,cont){
+  var s=n.cloneNode(false); s.setAttribute("data-shell",""); s.removeAttribute("id");
+  if(cont) s.classList.add("cont");
+  if(n.tagName==="TABLE") [].forEach.call(n.children,function(c){if(/^(CAPTION|COLGROUP|THEAD)$/.test(c.tagName)&&(!cont||c.tagName!=="CAPTION")) s.appendChild(c.cloneNode(true));});
+  return s;
+}
+function bkPageEl(){
+  var p=document.createElement("div"); p.className="rpage";
+  var nm=v("name")||"受測者", dt=v("date")||"";
+  p.innerHTML='<div class="rph"><span>曼齡診所｜個人化健康與運動功能評估報告</span><span>'+esc(nm)+(dt?"｜"+esc(dt):"")+'</span></div><div class="rpb"></div>'+
+    '<div class="rpf"><span>本報告僅供運動規劃參考，不能取代醫療診斷</span><span class="rpn"></span></div>';
+  return p;
+}
+function bkFitBig(c,body){
+  /* 單一區塊比一整頁還高（很少見）：等比例縮小放進一頁 */
+  var avail=body.getBoundingClientRect().bottom-c.getBoundingClientRect().top-2, k=1;
+  for(var t=0;t<3;t++){
+    var h=c.getBoundingClientRect().height/k; if(h<=avail) break;
+    k=Math.max(0.4,avail/h*0.98);
+    c.style.transformOrigin="0 0"; c.style.transform="scale("+k+")"; c.style.width=(100/k)+"%";
+    c.style.marginBottom=(-(c.offsetHeight*(1-k)))+"px";
+  }
+}
+function bkFixImgs(src){
+  [].forEach.call(src.querySelectorAll("img"),function(im){
+    if(im.naturalWidth&&!im.getAttribute("width")){im.setAttribute("width",im.naturalWidth); im.setAttribute("height",im.naturalHeight);}
+  });
+}
+function paginate(src,host){
+  host.innerHTML="";
+  var pages=[], body=null, wrap=null, k=1, chain=[];
+  var KMIN=0.86; /* 差一點放不下時，整頁最多縮到 90%，避免多出一頁只有一兩行 */
+  function newPage(){
+    var p=bkPageEl(); host.appendChild(p); pages.push(p); body=p.querySelector(".rpb");
+    wrap=document.createElement("div"); wrap.className="rpz"; body.appendChild(wrap); k=1;
+    var par=wrap; chain.forEach(function(c){var s=bkShell(c.src,true); par.appendChild(s); c.dst=s; par=s;});
+    return par;
+  }
+  function setK(x){k=x; if(x===1){wrap.style.transform="";wrap.style.width="";} else {wrap.style.transform="scale("+x+")"; wrap.style.width=(100/x)+"%";}}
+  function cur(){return chain.length?chain[chain.length-1].dst:wrap;}
+  function over(){return wrap.offsetHeight*k>body.clientHeight+1;}
+  function squeeze(){
+    /* 試著把整頁縮小一點放進去；成功回傳 true */
+    var k0=k;
+    for(var x=Math.round((k0-0.02)*100)/100;x>=KMIN-0.001;x=Math.round((x-0.02)*100)/100){setK(x); if(!over()) return true;}
+    setK(k0); return false;
+  }
+  function blank(){return !body.textContent.trim()&&!body.querySelector("img,svg");}
+  function room(el){return body.getBoundingClientRect().bottom-el.getBoundingClientRect().bottom;}
+  function place(n){
+    if(n.nodeType===3){
+      if(!n.textContent.trim()){cur().appendChild(n.cloneNode());return;}
+      var wb=blank(), t=n.cloneNode(); cur().appendChild(t);
+      if(over()&&!wb){t.remove(); newPage(); cur().appendChild(t);}
+      return;
+    }
+    if(n.nodeType!==1||bkHidden(n)) return;
+    var par=cur(), wasBlank=blank(), c=n.cloneNode(true); par.appendChild(c);
+    if(over()&&!wasBlank&&!bkSplittable(n)&&!n.matches(HEAD_SEL)&&squeeze()) return;
+    if(!over()){
+      /* 標題不要孤零零留在頁尾 */
+      if(!wasBlank&&n.matches(HEAD_SEL)&&n.nextElementSibling&&room(c)<140){c.remove(); newPage(); cur().appendChild(c);}
+      return;
+    }
+    c.remove();
+    if(bkSplittable(n)){
+      var s=bkShell(n,false); par.appendChild(s); chain.push({src:n,dst:s});
+      [].forEach.call(n.childNodes,place);
+      chain.pop(); return;
+    }
+    if(!wasBlank){
+      /* 要換頁時，把剛放在頁尾的標題（和緊接的說明）一起帶到下一頁 */
+      var carry=[], last=par.lastElementChild;
+      if(last&&last.tagName==="P"&&last.previousElementSibling&&last.previousElementSibling.matches(HEAD_SEL)){carry.unshift(last); last=last.previousElementSibling;}
+      if(last&&last.matches(HEAD_SEL)) carry.unshift(last); else carry=[];
+      carry.forEach(function(x){x.remove();});
+      newPage(); carry.forEach(function(x){cur().appendChild(x);});
+    }
+    cur().appendChild(c);
+    if(over()) bkFitBig(c,body);
+  }
+  newPage();
+  [].forEach.call(src.childNodes,place);
+  /* 清掉因換頁而留下的空殼 */
+  pages.forEach(function(p){
+    var shells=[].slice.call(p.querySelectorAll("[data-shell]")).reverse();
+    shells.forEach(function(sh){if(!sh.textContent.trim()&&!sh.querySelector("img,svg")) sh.remove();});
+  });
+  pages=pages.filter(function(p){var b=p.querySelector(".rpb"); if(!b.textContent.trim()&&!b.querySelector("img,svg")){p.remove();return false;} return true;});
+  if(pages[0]) pages[0].classList.add("first");
+  if(reportMode==="pro"){var cv=coverPage(); host.insertBefore(cv,host.firstChild); pages.unshift(cv);}
+  pages.forEach(function(p,i){var n=p.querySelector(".rpn"); if(n) n.textContent="第 "+(i+1)+" / "+pages.length+" 頁";});
+  return pages;
+}
+function bkHost(id){var h=$(id); if(!h){h=document.createElement("div"); h.id=id; h.setAttribute("aria-hidden","true"); document.body.appendChild(h);} return h;}
+function reportReady(){var r=$("report"); return !!(r&&r.querySelector(".head"));}
+/* 取得排好的頁面（等圖片、字型載入完） */
+function buildPages(hostId){
+  var src=$("report");
+  return waitImgs(src).then(function(){return document.fonts?document.fonts.ready:null;}).then(function(){
+    bkFixImgs(src); return paginate(src,bkHost(hostId));
+  });
+}
+
+/* ---------- 檢視器 ---------- */
+function applyView(){
+  var on=bookView==="book"&&reportReady();
+  $("report").classList.toggle("bk-src",on);
+  $("report").setAttribute("aria-hidden",on?"true":"false");
+  $("book").hidden=!on;
+  [].forEach.call(document.querySelectorAll("#viewSeg button"),function(b){b.classList.toggle("on",b.dataset.view===bookView);});
+  if(!on&&$("book").classList.contains("max")) bookMax(false);
+}
+function scheduleBook(){
+  applyView();
+  if(inBookRender||bookView!=="book"||!reportReady()) return;
+  clearTimeout(bookT); bookT=setTimeout(refreshBook,180);
+}
+function refreshBook(){
+  var gen=++bookGen;
+  buildPages("bookHost").then(function(pages){
+    if(gen!==bookGen) return;
+    if(bookAnim){try{bookAnim.finish();}catch(e){}}
+    var sc=document.querySelector("#book .fb-scale"); sc.innerHTML="";
+    bookPages=pages; if(bookIdx>=pages.length) bookIdx=Math.max(0,pages.length-1);
+    pages.forEach(function(p,i){p.classList.toggle("on",i===bookIdx); sc.appendChild(p);});
+    bkHost("bookHost").innerHTML="";
+    drawDots(); fitBook(); updateBar();
+  });
+}
+function fitBook(){
+  var bk=$("book"); if(bk.hidden) return;
+  var st=bk.querySelector(".fb-stage"), fr=bk.querySelector(".fb-frame"), sc=bk.querySelector(".fb-scale");
+  var w=st.clientWidth, max=bk.classList.contains("max");
+  if(max) w-=120*(window.innerWidth>860?1:0);
+  var nop=$("subReport").classList.contains("nopanel")&&window.innerWidth>860;
+  var h=max?st.clientHeight:nop?Math.max(560,window.innerHeight-250):Infinity, k=Math.min(w/BOOK_W,h/BOOK_H);
+  if(!(k>0)) return;
+  sc.style.transform="scale("+k+")"; fr.style.width=Math.floor(BOOK_W*k)+"px"; fr.style.height=Math.floor(BOOK_H*k)+"px";
+}
+function updateBar(){
+  var bk=$("book"), n=bookPages.length;
+  bk.querySelector(".fb-num").textContent=n?"第 "+(bookIdx+1)+" / "+n+" 頁":"";
+  [".fb-prev",".fb-arrow.prev"].forEach(function(q){bk.querySelector(q).disabled=bookIdx<=0;});
+  [".fb-next",".fb-arrow.next"].forEach(function(q){bk.querySelector(q).disabled=bookIdx>=n-1;});
+  [].forEach.call(bk.querySelectorAll(".fb-dots button"),function(b,i){b.classList.toggle("on",i===bookIdx); b.setAttribute("aria-current",i===bookIdx?"page":"false");});
+}
+function drawDots(){
+  $("book").querySelector(".fb-dots").innerHTML=bookPages.map(function(p,i){return '<button type="button" data-p="'+i+'" aria-label="第 '+(i+1)+' 頁">'+(p.classList.contains("cover")?"封":(i+1))+'</button>';}).join("");
+}
+function goPage(i){
+  var n=bookPages.length; if(i<0||i>=n||i===bookIdx) return;
+  if(bookAnim){try{bookAnim.finish();}catch(e){}}
+  var from=bookPages[bookIdx], to=bookPages[i], fwd=i>bookIdx;
+  bookIdx=i; updateBar();
+  var still=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(still||!from.animate){from.classList.remove("on"); to.classList.add("on"); return;}
+  to.classList.add("on");
+  var top=fwd?from:to, other=fwd?to:from;
+  top.style.zIndex=2; other.style.zIndex=1; top.classList.add("turning");
+  var kf=fwd?[{transform:"rotateY(0deg)"},{transform:"rotateY(-180deg)"}]:[{transform:"rotateY(-180deg)"},{transform:"rotateY(0deg)"}];
+  var a=top.animate(kf,{duration:650,easing:"cubic-bezier(.35,.05,.25,1)"}); bookAnim=a;
+  a.onfinish=a.oncancel=function(){from.classList.remove("on"); top.classList.remove("turning"); top.style.zIndex=""; other.style.zIndex=""; if(bookAnim===a) bookAnim=null;};
+}
+function bookMax(on){
+  var bk=$("book"); bk.classList.toggle("max",on); document.body.classList.toggle("fb-lock",on);
+  bk.querySelector(".fb-max").textContent=on?"關閉全螢幕":"全螢幕翻閱";
+  fitBook(); if(on) bk.focus&&bk.setAttribute("tabindex","-1");
+}
+(function(){
+  var bk=$("book");
+  bk.addEventListener("click",function(e){
+    var b=e.target.closest("button");
+    if(b){
+      if(b.classList.contains("fb-prev")||b.matches(".fb-arrow.prev")) goPage(bookIdx-1);
+      else if(b.classList.contains("fb-next")||b.matches(".fb-arrow.next")) goPage(bookIdx+1);
+      else if(b.classList.contains("fb-max")) bookMax(!bk.classList.contains("max"));
+      else if(b.dataset.p!=null) goPage(+b.dataset.p);
+      return;
+    }
+    if(swiped){swiped=false;return;}
+    var pg=e.target.closest(".rpage"); if(!pg) {if(bk.classList.contains("max")&&e.target.classList.contains("fb-stage")) bookMax(false); return;}
+    var r=pg.getBoundingClientRect(); goPage(e.clientX<r.left+r.width*0.35?bookIdx-1:bookIdx+1);
+  });
+  var sx=null, sy=null, swiped=false;
+  bk.addEventListener("pointerdown",function(e){if(e.target.closest("button"))return; sx=e.clientX; sy=e.clientY; swiped=false;});
+  bk.addEventListener("pointerup",function(e){
+    if(sx==null) return; var dx=e.clientX-sx, dy=e.clientY-sy; sx=null;
+    if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.3){swiped=true; goPage(bookIdx+(dx<0?1:-1));}
+  });
+  document.addEventListener("keydown",function(e){
+    if(bk.hidden||/^(INPUT|TEXTAREA|SELECT)$/.test((e.target.tagName||""))||e.target.isContentEditable) return;
+    if(e.key==="Escape"&&bk.classList.contains("max")){bookMax(false);return;}
+    if(page!=="test"&&!bk.classList.contains("max")) return;
+    if(e.key==="ArrowRight"||e.key==="PageDown"){goPage(bookIdx+1);e.preventDefault();}
+    else if(e.key==="ArrowLeft"||e.key==="PageUp"){goPage(bookIdx-1);e.preventDefault();}
+  });
+  window.addEventListener("resize",fitBook);
+  if(window.ResizeObserver) new ResizeObserver(fitBook).observe(bk.querySelector(".fb-stage"));
+  $("viewSeg").addEventListener("click",function(e){
+    var b=e.target.closest("button[data-view]"); if(!b) return; bookView=b.dataset.view;
+    try{localStorage.setItem("ma-view",bookView);}catch(err){}
+    applyView(); if(bookView==="book") refreshBook();
+  });
+})();
+var _renderReport=render;
+render=function(){var r=_renderReport.apply(this,arguments); scheduleBook(); try{updateCollSums();applyPanel();skipNote();}catch(e){} return r;};
+function skipNote(){
+  var m=$("repMsg"); if(!m) return;
+  if(lastSkipped.length&&reportReady()){m.textContent="有 "+lastSkipped.length+" 個數值超出合理範圍，報告和分數暫不計入："+lastSkipped.map(fieldLabel).join("、")+"。請回輸入欄確認（標紅的欄位）。"; m.className="msg err"; m.dataset.skip="1";}
+  else if(m.dataset.skip){m.textContent=""; m.className="msg"; delete m.dataset.skip;}
+}
+/* ---------- 收起輸入欄 ---------- */
+var panelHidden=(function(){try{return localStorage.getItem("ma-nopanel")==="1";}catch(e){return false;}})();
+function applyPanel(){
+  /* 沒有報告時一定顯示輸入欄，並取消「收起」，避免輸入到一半輸入欄突然消失 */
+  if(panelHidden&&!reportReady()){panelHidden=false; try{localStorage.setItem("ma-nopanel","0");}catch(e){}}
+  var on=panelHidden&&reportReady(), app=$("subReport");
+  app.classList.toggle("nopanel",on);
+  var b=$("panelTog"); b.setAttribute("aria-pressed",on?"true":"false"); b.querySelector(".ptl").textContent=on?"展開輸入欄":"收起輸入欄";
+  fitBook();
+}
+$("panelTog").addEventListener("click",function(){
+  panelHidden=!$("subReport").classList.contains("nopanel");
+  try{localStorage.setItem("ma-nopanel",panelHidden?"1":"0");}catch(e){}
+  applyPanel(); window.scrollTo({top:0});
+});
+
+/* ---------- 左欄區塊收起／展開 ---------- */
+var COLL_KEY="ma-coll";
+function collState(){try{return JSON.parse(localStorage.getItem(COLL_KEY)||"{}");}catch(e){return {};}}
+function setColl(el,closed){
+  el.classList.toggle("closed",closed);
+  var b=el.querySelector(".ctog"); if(b) b.setAttribute("aria-expanded",closed?"false":"true");
+  var st=collState(); st[el.dataset.coll]=closed; try{localStorage.setItem(COLL_KEY,JSON.stringify(st));}catch(e){}
+  updateCollSums();
+}
+function updateCollSums(){
+  var miss=[]; if(!v("date")) miss.push("日期"); if(!v("sex")) miss.push("性別"); if(!v("age")) miss.push("年齡"); if(!v("weight")) miss.push("體重");
+  var sx=v("sex")==="F"?"女":v("sex")==="M"?"男":"";
+  var parts=[v("date"),v("name"),(sx||"")+(v("age")?" "+v("age")+" 歲":""),v("height")?v("height")+" cm":"",v("weight")?v("weight")+" kg":""].filter(function(x){return x&&x.trim();});
+  $("basicSum").innerHTML='<b>'+esc(parts.join("・")||"尚未填寫")+'</b>'+(miss.length?'<br><span class="miss">必填未填：'+miss.join("、")+'</span>':'');
+  var done=[].map.call(document.querySelectorAll("#testTabs button.has"),function(b){return b.textContent.replace(/\s+/g," ").trim();});
+  $("testsSum").innerHTML=done.length?'已填 <span class="ok">'+done.length+'</span> 項：'+esc(done.join("、")):'尚未填寫任何檢測';
+  var hl=$("hist")?$("hist").children.length:0; $("histSum").textContent=hl?"共 "+hl+" 筆":"";
+}
+function bindColl(el){
+  var st=collState();
+  if(st[el.dataset.coll]) {el.classList.add("closed"); var b=el.querySelector(".ctog"); if(b) b.setAttribute("aria-expanded","false");}
+  var hd=el.querySelector(":scope>legend")||el.querySelector(":scope>.chead");
+  function tg(e){if(e.target.closest("a,input,select,textarea")&&!e.target.closest(".ctog")) return; e.preventDefault(); setColl(el,!el.classList.contains("closed"));}
+  el.querySelector(".ctog").addEventListener("click",function(e){e.stopPropagation(); tg(e);});
+  if(hd) hd.addEventListener("click",tg);
+  var sum=el.querySelector(":scope>.csum"); if(sum){sum.style.cursor="pointer"; sum.addEventListener("click",tg);}
+}
+/* 資料與設定：每張卡片都可以收起 */
+function collCard(card,key){
+  var h=card.querySelector(":scope>.ch"); if(!h||card.dataset.coll) return;
+  var body=document.createElement("div"); body.className="cbody";
+  while(h.nextSibling) body.appendChild(h.nextSibling);
+  card.appendChild(body); card.classList.add("coll","scard"); card.dataset.coll=key;
+  h.classList.add("chead"); h.insertAdjacentHTML("beforeend",'<button type="button" class="ctog" aria-expanded="true" aria-label="收起／展開"></button>');
+  bindColl(card);
+}
+(function(){
+  [].forEach.call(document.querySelectorAll("#pg-settings>.card"),function(c){var h=c.querySelector(":scope>.ch"); if(h) collCard(c,"set:"+h.textContent.trim());});
+  [].forEach.call(document.querySelectorAll(".coll[data-coll]:not(.scard)"),bindColl);
+  $("form").addEventListener("input",updateCollSums); $("form").addEventListener("change",updateCollSums);
+  updateCollSums();
+})();
+
+
+/* ---------- 匯出：PDF、每頁圖片、分享都用同一套分頁 ---------- */
+function capturePages(){
+  var root=document.documentElement, prev=root.getAttribute("data-theme"), canv=[];
+  inBookRender=true; root.setAttribute("data-theme","light"); _renderReport();
+  return libs().then(function(){return buildPages("bookExport");}).then(function(pages){
+    var host=$("bookExport");
+    return rasterSvgs(host).then(function(){
+      return pages.reduce(function(pr,p){return pr.then(function(){
+        return window.html2canvas(p,{scale:2,backgroundColor:"#ffffff",useCORS:true,logging:false,width:BOOK_W,height:BOOK_H,windowWidth:1200}).then(function(c){canv.push(c);});
+      });},Promise.resolve());
+    });
+  }).then(function(){return canv;}).finally(function(){
+    $("bookExport").innerHTML=""; if(prev==null) root.removeAttribute("data-theme"); else root.setAttribute("data-theme",prev);
+    inBookRender=false; render();
+  });
+}
+function canvasBlob(c,type,q){return new Promise(function(res){c.toBlob(res,type||"image/png",q);});}
+function pdfBlob(){
+  return capturePages().then(function(cs){
+    var pdf=new window.jspdf.jsPDF({unit:"pt",format:"a4"}), pw=pdf.internal.pageSize.getWidth(), ph=pdf.internal.pageSize.getHeight();
+    cs.forEach(function(c,i){if(i) pdf.addPage(); pdf.addImage(c.toDataURL("image/jpeg",0.92),"JPEG",0,0,pw,ph);});
+    return pdf.output("blob");
+  });
 }
 function exportPdf(){
   var btn=$("btnPdf"); busy(btn,true,"產生中…"); setMsg("repMsg","");
-  var cap;
-  captureReport().then(function(c){cap=c; return reportMode==="pro"?coverCanvas():null;}).then(function(cov){
-    var jsPDF=window.jspdf.jsPDF, pdf=new jsPDF({unit:"pt",format:"a4"}), pro=reportMode==="pro";
-    var pw=pdf.internal.pageSize.getWidth(), ph=pdf.internal.pageSize.getHeight(), m=32, top=56, bot=48, iw=pw-2*m, ih=ph-top-bot;
-    var k=cap.canvas.width/cap.w, pageH=ih*cap.w/iw, start=0, slices=[];
-    while(start<cap.h-1){
-      var lim=start+pageH, end;
-      if(lim>=cap.h) end=cap.h;
-      else{end=0;cap.breaks.forEach(function(b){if(b>start+pageH*0.2&&b<=lim&&b>end)end=b;}); if(!end) end=lim;}
-      slices.push([start,end]); start=end;
-    }
-    var off=cov?1:0;
-    if(cov) pdf.addImage(cov.toDataURL("image/jpeg",0.92),"JPEG",0,0,pw,ph);
-    var total=slices.length+off, nm=v("name")||"受測者", dt=v("date")||"";
-    var head=bandImg("曼齡診所｜個人化健康與運動功能評估報告",nm+(dt?"｜"+dt:""),iw,18,"bottom");
-    slices.forEach(function(sl,i){
-      var sc=document.createElement("canvas"); sc.width=cap.canvas.width; sc.height=Math.max(1,Math.ceil((sl[1]-sl[0])*k));
-      var ctx=sc.getContext("2d"); ctx.fillStyle="#fff"; ctx.fillRect(0,0,sc.width,sc.height);
-      ctx.drawImage(cap.canvas,0,Math.floor(sl[0]*k),sc.width,sc.height,0,0,sc.width,sc.height);
-      if(i>0||cov) pdf.addPage();
-      pdf.addImage(head,"PNG",m,24,iw,18);
-      pdf.addImage(sc.toDataURL("image/jpeg",0.92),"JPEG",m,top,iw,(sl[1]-sl[0])*iw/cap.w);
-      pdf.addImage(bandImg("本報告僅供運動規劃參考，不能取代醫療診斷","第 "+(i+1+off)+" / "+total+" 頁",iw,18,"top"),"PNG",m,ph-38,iw,18);
-    });
-    return saveFile(fileBase()+".pdf",pdf.output("blob"),"repMsg");
-  }).catch(function(){setMsg("repMsg","產生 PDF 失敗，請確認網路連線後再試。","err");}).finally(function(){busy(btn,false);});
-}
-function exportPng(){
-  var btn=$("btnPng"); busy(btn,true,"產生中…"); setMsg("repMsg","");
-  captureReport().then(function(cap){
-    return new Promise(function(res){cap.canvas.toBlob(res,"image/png");});
-  }).then(function(blob){return saveFile(fileBase()+".png",blob,"repMsg");})
-  .catch(function(){setMsg("repMsg","產生圖片失敗，請確認網路連線後再試。","err");}).finally(function(){busy(btn,false);});
+  pdfBlob().then(function(b){return saveFile(fileBase()+".pdf",b,"repMsg");})
+  .catch(function(){setMsg("repMsg","產生 PDF 失敗，請確認網路連線後再試。","err");}).finally(function(){busy(btn,false);});
 }
 var CSV_HEAD=["姓名","性別","群組","電話","生日","檢測日期","年齡","身高(cm)","體重(kg)","體脂肪率(%)","內臟脂肪","內臟脂肪單位","SMI(kg/m²)","四肢骨骼肌量(kg)","右腳肌肉量(kg)","左腳肌肉量(kg)","HGS(kg)","HGS計算方式","右手握力(kg)","左手握力(kg)","IMTP峰值力量(N)","左腳(%)","右腳(%)","100ms力量(N)","200ms力量(N)","相對峰值力量(N/kg)","200ms出力比例(%)","左右不對稱指數(%)","CMJ跳躍高度(cm)","CMJ峰值功率(W)","CMJ相對功率(W/kg)","RSImod","CMJ左腳(%)","SJ跳躍高度(cm)","左腳單腳站晃動(mm)","右腳單腳站晃動(mm)","閉眼雙腳站晃動(mm)","Moti 姿勢觀察","Moti 圖片數","Moti 教練說明"];
 function n(x){return x==null?"":x;}
@@ -2839,8 +3374,19 @@ function exportAll(){
   .catch(function(){setMsg("listMsg","讀取資料失敗，請再試一次。","err");}).finally(function(){busy(btn,false);});
 }
 var printPrev=null;
-window.addEventListener("beforeprint",function(){var r=document.documentElement;printPrev=r.getAttribute("data-theme");r.setAttribute("data-theme","light");render();});
-window.addEventListener("afterprint",function(){var r=document.documentElement;if(printPrev==null)r.removeAttribute("data-theme");else r.setAttribute("data-theme",printPrev);render();});
+window.addEventListener("beforeprint",function(){
+  var r=document.documentElement; printPrev=r.getAttribute("data-theme"); r.setAttribute("data-theme","light");
+  inBookRender=true; _renderReport(); inBookRender=false;
+  if(reportReady()){
+    /* 先在看得到版面的暫存區排好頁（列印區平常是隱藏的，量不到高度），再搬到列印區 */
+    var src=$("report"), tmp=bkHost("bookExport"), ph=bkHost("printHost"); bkFixImgs(src);
+    var pages=paginate(src,tmp); ph.innerHTML=""; pages.forEach(function(pp){ph.appendChild(pp);}); tmp.innerHTML=""; r.classList.add("pbook");
+  }
+});
+window.addEventListener("afterprint",function(){
+  var r=document.documentElement; r.classList.remove("pbook"); bkHost("printHost").innerHTML="";
+  if(printPrev==null) r.removeAttribute("data-theme"); else r.setAttribute("data-theme",printPrev); render();
+});
 var IN_FRAME=(function(){try{return window.self!==window.top;}catch(e){return true;}})();
 $("btnPrint").addEventListener("click",function(){
   if(!IN_FRAME){window.print();return;}
@@ -2849,17 +3395,17 @@ $("btnPrint").addEventListener("click",function(){
 });
 function shareReport(){
   var btn=$("btnShare"); busy(btn,true,"準備中…"); setMsg("repMsg","");
-  var name=fileBase()+".png";
-  captureReport().then(function(cap){return new Promise(function(res){cap.canvas.toBlob(res,"image/png");});}).then(function(blob){
-    var file=null; try{file=new File([blob],name,{type:"image/png"});}catch(e){}
-    if(file&&navigator.canShare&&navigator.canShare({files:[file]})){
-      return navigator.share({files:[file],title:(v("name")||"")+" 評估報告"}).then(function(){setMsg("repMsg","已分享。","ok");},function(e){
+  var name=fileBase()+".pdf", blob;
+  pdfBlob().then(function(b){
+    blob=b; var f=null; try{f=new File([b],name,{type:"application/pdf"});}catch(e){}
+    if(f&&navigator.canShare&&navigator.canShare({files:[f]})){
+      return navigator.share({files:[f],title:(v("name")||"")+" 評估報告"}).then(function(){setMsg("repMsg","已分享 PDF 報告。","ok");},function(e){
         if(e&&e.name==="AbortError") return;
-        return saveFile(name,blob,"repMsg").then(function(){setMsg("repMsg","此環境不支援直接分享，已改為下載報告圖片，可再傳到 LINE。","ok");});
+        return saveFile(name,blob,"repMsg").then(function(){setMsg("repMsg","此環境不支援直接分享，已改為下載 PDF，可再傳到 LINE。","ok");});
       });
     }
-    return saveFile(name,blob,"repMsg").then(function(){setMsg("repMsg","此環境不支援直接分享，已改為下載報告圖片，可再傳到 LINE。","ok");});
-  }).catch(function(){setMsg("repMsg","產生報告圖片失敗，請確認網路連線後再試。","err");}).finally(function(){busy(btn,false);});
+    return saveFile(name,blob,"repMsg").then(function(){setMsg("repMsg","此環境不支援直接分享，已改為下載 PDF，可再傳到 LINE。","ok");});
+  }).catch(function(){setMsg("repMsg","產生 PDF 失敗，請確認網路連線後再試。","err");}).finally(function(){busy(btn,false);});
 }
 $("btnShare").addEventListener("click",shareReport);
 /* 備份與還原 */
@@ -2893,7 +3439,6 @@ $("btnBackup").addEventListener("click",backup);
 $("btnRestore").addEventListener("click",function(){$("restoreFile").value="";$("restoreFile").click();});
 $("restoreFile").addEventListener("change",function(){var f=this.files&&this.files[0]; if(f) restore(f);});
 $("btnPdf").addEventListener("click",exportPdf);
-$("btnPng").addEventListener("click",exportPng);
 $("btnCsvOne").addEventListener("click",exportOne);
 $("btnCsvAll").addEventListener("click",exportAll);
 (window.claude&&window.claude.use?window.claude.use("downloads"):Promise.resolve(null)).then(function(x){
@@ -2935,7 +3480,7 @@ $("motiFind").addEventListener("input",function(e){var t=e.target, ds=t.dataset|
 });
 $("motiFind").addEventListener("click",function(e){var b=e.target.closest("button[data-xl]"); if(!b) return; var p2=b.dataset.xl.split("|"), it=curMoti[p2[0]].it, o=it[p2[1]]=it[p2[1]]||{}; o.lvl=+b.dataset.v;
   [].forEach.call(b.parentNode.querySelectorAll("button"),function(x){x.classList.toggle("on",x===b);}); render();});
-$("motiRisk").addEventListener("input",function(){var v=this.value; curMoti.risk=v===""?null:Math.max(0,Math.min(100,parseFloat(v))); $("motiRiskLv").textContent=curMoti.risk!=null?zoneOf(MOTI_SCALE,Math.min(99.9,curMoti.risk)).label:"";});
+$("motiRisk").addEventListener("input",function(){var v=this.value; var rv=parseFloat(v); curMoti.risk=(v===""||!isFinite(rv)||rv<0||rv>100)?null:rv; $("motiRiskLv").textContent=curMoti.risk!=null?zoneOf(MOTI_SCALE,Math.min(99.9,curMoti.risk)).label:"";});
 $("motiNote").addEventListener("input",function(){curMoti.note=this.value;});
 $("motiDrop").addEventListener("click",function(){$("motiFile").value="";$("motiFile").click();});
 $("motiDrop").addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();$("motiFile").value="";$("motiFile").click();}});
@@ -3021,10 +3566,7 @@ $("logoFile").addEventListener("change",function(){uploadLogo(this.files[0]);});
 $("btnLogoDel").addEventListener("click",function(){if(db) db.doc("config/brand").set({logo:"",updatedAt:Date.now()}).then(function(){setMsg("logoMsg","已移除 Logo。","ok");});});
 $("qaName").addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();quickAdd();}});
 $("sgCalc").addEventListener("click",sgCalc);
-$("onCalc").addEventListener("click",onCalc);
-$("onApply").addEventListener("click",onApply);
-$("onTarget").addEventListener("change",function(){if(onLast) $("onOut").innerHTML=onHTML(onLast);});
-$("onMin").addEventListener("change",function(){if(onLast){onLast.min=+$("onMin").value; $("onOut").innerHTML=onHTML(onLast); var ok=onCount(onLast); $("onApply").disabled=!ok;}});
+$("onMin").addEventListener("change",function(){OWN_MIN=+$("onMin").value||30; try{localStorage.setItem("ma-own-min",String(OWN_MIN));}catch(e){} ownSig=""; calcOwn();});
 $("sgCsv").addEventListener("click",sgCsv);
 $("gfilter").addEventListener("change",renderMembers);
 document.addEventListener("click",function(e){
@@ -3610,7 +4152,7 @@ function startDb(x,mode){
   db.collection("members").onSnapshot(function(snap){
     members=snap.docs.map(function(d){return Object.assign({id:d.id},d.data());});
     if(selected){var m=members.find(function(x){return x.id===selected.id;}); if(m){selected=m;fillMemberCard();}}
-    renderGroupOptions(); renderMembers();
+    renderGroupOptions(); renderMembers(); scheduleOwn();
   },function(){$("dbNote").textContent="無法讀取會員資料：需要此頁面的「編輯者」以上權限。";});
   db.doc("config/brand").onSnapshot(function(snap){
     BRAND.logo=snap.exists&&snap.data().logo?snap.data().logo:""; applyBrand(); render();
