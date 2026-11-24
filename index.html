@@ -2778,7 +2778,7 @@ function checkField(id){
   if((id==="pfLp"||id==="cmjLp")&&(x<r[0]||x>r[1])) return "左右比例通常在 30–70% 之間，請確認填的是左腳的 %。";
   if(r&&(x<r[0]||x>r[1])) return "數值不太合理，常見範圍約 "+r[0]+"–"+r[1]+(r[2]?" "+r[2]:"")+"，請再確認。";
   if(id==="f200"){var pf=parseFloat($("pf").value); if(pf&&x>pf) return "200 毫秒力量不會大於峰值力量，請再確認。";}
-  if(id==="f100"){var f2=parseFloat($("f200").value); if(f2&&x>f2) return "100 毫秒力量通常小於 200 毫秒力量，請再確認。";}
+  if(id==="f100"){var p1=parseFloat($("pf").value); if(p1&&x>p1) return "100 毫秒力量不會大於峰值力量，請再確認。";}
   if(id==="pf"){var w=parseFloat($("weight").value); if(w>0&&x<w*9.81*0.9) return "峰值力量低於體重（約 "+Math.round(w*9.81)+" N），請確認單位是牛頓（N）。";}
   return "";
 }
